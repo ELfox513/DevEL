@@ -223,23 +223,17 @@ public class Config {
 
     public static String getModId() {
         if (f8543b == null) {
-            f8543b = "";
-            try {
-                File file = new File("mod_id.txt");
-                if (file.exists() && file.isFile()) {
-                    String replaceAll = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8")).readLine().trim().replaceAll("[^a-zA-Z0-9]", "");
-                    if (replaceAll.length() > 0 && replaceAll.length() <= 32) {
-                        f8543b = replaceAll;
-                        Logger.log("Config", "Using mod id: " + f8543b);
-                    } else {
-                        Logger.log("Config", "Invalid or empty mod id (should be a-zA-Z0-9, 1-32 chars in length)");
-                    }
+            f8543b = "DevEL";
+            File file = Gdx.files.external("mod_id.txt").file();
+            if (file.exists() && file.isFile()) {
+                String replaceAll = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8")).readLine().trim().replaceAll("[^a-zA-Z0-9]", "");
+                if (replaceAll.length() > 0 && replaceAll.length() <= 32) {
+                    f8543b = replaceAll;
+                } else {
+                    Logger.log("Config", "Invalid or empty mod id (should be a-zA-Z0-9, 1-32 chars in length)");
                 }
-            } catch (Exception unused) {
             }
-        }
-        if ("".equals(f8543b)) {
-            return null;
+            Logger.log("Config", "Using mod id: " + f8543b);
         }
         return f8543b;
     }

@@ -1511,16 +1511,23 @@
 
     const-string v1, ""
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
-    sput-object v1, Lcom/prineside/tdi2/Config;->b:Ljava/lang/String;
+    const-string v2, "DevEL"
 
-    :try_start_0
-    new-instance v0, Ljava/io/File;
+    sput-object v2, Lcom/prineside/tdi2/Config;->b:Ljava/lang/String;
 
     const-string v2, "mod_id.txt"
 
-    invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    sget-object v3, Lcom/badlogic/gdx/Gdx;->files:Lcom/badlogic/gdx/Files;
+
+    invoke-interface {v3, v2}, Lcom/badlogic/gdx/Files;->external(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/badlogic/gdx/files/FileHandle;->file()Ljava/io/File;
+
+    move-result-object v0
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -1565,14 +1572,11 @@
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v2
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     const-string v3, "Config"
 
     if-lez v2, :cond_0
 
-    :try_start_1
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -1583,6 +1587,15 @@
 
     sput-object v0, Lcom/prineside/tdi2/Config;->b:Ljava/lang/String;
 
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "Invalid or empty mod id (should be a-zA-Z0-9, 1-32 chars in length)"
+
+    invoke-static {v3, v0}, Lcom/prineside/tdi2/Logger;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1599,40 +1612,13 @@
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lcom/prineside/tdi2/Logger;->log(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v1, "Config"
 
-    goto :goto_0
-
-    :cond_0
-    const-string v0, "Invalid or empty mod id (should be a-zA-Z0-9, 1-32 chars in length)"
-
-    invoke-static {v3, v0}, Lcom/prineside/tdi2/Logger;->log(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    nop
-
-    :cond_1
-    :goto_0
-    sget-object v0, Lcom/prineside/tdi2/Config;->b:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/4 v0, 0x0
-
-    goto :goto_1
+    invoke-static {v1, v0}, Lcom/prineside/tdi2/Logger;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     sget-object v0, Lcom/prineside/tdi2/Config;->b:Ljava/lang/String;
 
-    :goto_1
     return-object v0
 .end method
 
