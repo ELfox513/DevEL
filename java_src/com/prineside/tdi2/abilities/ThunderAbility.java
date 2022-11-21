@@ -113,7 +113,7 @@ public class ThunderAbility extends Ability {
         public void setupAssets() {
             this.lightningTexture = Game.f8589i.assetManager.getTextureRegion("chain-lightning-wide");
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/sparks.prt"), Game.f8589i.assetManager.getTextureRegion("particle-default").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/sparks.prt"), Game.f8589i.assetManager.getTextureRegion("particle-default").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f9057c = new ParticleEffectPool(particleEffect, 8, 32);
         }

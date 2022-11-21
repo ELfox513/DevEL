@@ -48,7 +48,7 @@ public class BuffProjectile extends EnemyFollowingProjectile {
         public void setupAssets() {
             this.f10411b = Game.f8589i.assetManager.getTextureRegion("projectile-buff");
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/buff-projectile.prt"), Game.f8589i.assetManager.getTextureRegion("small-circle").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/buff-projectile.prt"), Game.f8589i.assetManager.getTextureRegion("small-circle").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f10412d = new ParticleEffectPool(particleEffect, 8, 1024);
         }

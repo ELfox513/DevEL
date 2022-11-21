@@ -123,7 +123,7 @@ public class WindstormAbility extends Ability {
         @Override // com.prineside.tdi2.Ability.Factory
         public void setupAssets() {
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/windstorm.prt"), Game.f8589i.assetManager.getTextureRegion("particle-default").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/windstorm.prt"), Game.f8589i.assetManager.getTextureRegion("particle-default").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f9068c = new ParticleEffectPool(particleEffect, 1, 16);
         }

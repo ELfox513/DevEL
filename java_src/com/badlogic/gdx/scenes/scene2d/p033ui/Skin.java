@@ -227,7 +227,7 @@ public class Skin implements Disposable {
                 Boolean bool3 = (Boolean) json2.readValue("markupEnabled", (Class<Class>) Boolean.class, (Class) bool, jsonValue);
                 FileHandle child = fileHandle.parent().child(str);
                 if (!child.exists()) {
-                    child = Gdx.files.internal(str);
+                    child = Gdx.files.external(str);
                 }
                 if (child.exists()) {
                     String nameWithoutExtension = child.nameWithoutExtension();

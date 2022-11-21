@@ -49,7 +49,7 @@ public class SnowballUnit extends Unit {
         public void setupAssets() {
             this.f15060b = Game.f8589i.assetManager.getTextureRegion("unit-type-snowball");
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/snowflakes-trace.prt"), Game.f8589i.assetManager.getTextureRegion("particle-snowflake").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/snowflakes-trace.prt"), Game.f8589i.assetManager.getTextureRegion("particle-snowflake").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f15061d = new ParticleEffectPool(particleEffect, 4, 512);
         }

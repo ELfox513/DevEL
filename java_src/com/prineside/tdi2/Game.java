@@ -439,7 +439,7 @@ public abstract class Game extends com.badlogic.gdx.Game {
         Logger.handleThreadExceptions(this.f8599j, this.actionResolver);
         final int i = 0;
         if (!Config.isHeadless()) {
-            BitmapFont bitmapFont = new BitmapFont(Gdx.files.internal("resourcepacks/default/futura.fnt"), new TextureRegion(new Texture(Gdx.files.internal("resourcepacks/default/futura.png"), Pixmap.Format.RGBA4444, false)));
+            BitmapFont bitmapFont = new BitmapFont(Gdx.files.external("resourcepacks/default/futura.fnt"), new TextureRegion(new Texture(Gdx.files.external("resourcepacks/default/futura.png"), Pixmap.Format.RGBA4444, false)));
             this.defaultSmallFuturaFont = bitmapFont;
             Texture texture = bitmapFont.getRegion().getTexture();
             Texture.TextureFilter textureFilter = Texture.TextureFilter.Linear;

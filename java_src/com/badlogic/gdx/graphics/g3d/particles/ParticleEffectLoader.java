@@ -70,7 +70,7 @@ public class ParticleEffectLoader extends AsynchronousAssetLoader<ParticleEffect
         while (it.hasNext()) {
             ResourceData.AssetData next = it.next();
             if (!resolve(next.filename).exists()) {
-                next.filename = fileHandle.parent().child(Gdx.files.internal(next.filename).name()).path();
+                next.filename = fileHandle.parent().child(Gdx.files.external(next.filename).name()).path();
             }
             Class<T> cls = next.type;
             if (cls == ParticleEffect.class) {

@@ -120,7 +120,7 @@ public class LaserProjectile extends Projectile {
             this.f10459b = Game.f8589i.assetManager.getTextureRegion("laser");
             this.f10460d = Game.f8589i.assetManager.getTextureRegion("laser-cap");
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/sparkles.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/sparkles.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f10461k = new ParticleEffectPool(particleEffect, 8, 1024);
         }

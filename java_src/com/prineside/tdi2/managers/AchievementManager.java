@@ -136,7 +136,7 @@ public class AchievementManager extends Manager.ManagerAdapter {
         boolean z;
         Arrays.fill(this.f9548a, 0);
         Arrays.fill(this.redeemed, false);
-        Iterator<JsonValue> iterator2 = new JsonReader().parse(Gdx.files.internal("res/achievements.json")).iterator2();
+        Iterator<JsonValue> iterator2 = new JsonReader().parse(Gdx.files.external("res/achievements.json")).iterator2();
         while (iterator2.hasNext()) {
             JsonValue next = iterator2.next();
             AchievementType valueOf = AchievementType.valueOf(next.name);

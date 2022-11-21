@@ -105,15 +105,15 @@ public class FirestormAbility extends Ability {
         @Override // com.prineside.tdi2.Ability.Factory
         public void setupAssets() {
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/screen-sparks-bottom-left.prt"), Game.f8589i.assetManager.getTextureRegion("particle-default").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/screen-sparks-bottom-left.prt"), Game.f8589i.assetManager.getTextureRegion("particle-default").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f8993c = new ParticleEffectPool(particleEffect, 1, 16);
             ParticleEffect particleEffect2 = new ParticleEffect();
-            particleEffect2.load(Gdx.files.internal("particles/screen-sparks-bottom-right.prt"), Game.f8589i.assetManager.getTextureRegion("particle-default").getAtlas());
+            particleEffect2.load(Gdx.files.external("particles/screen-sparks-bottom-right.prt"), Game.f8589i.assetManager.getTextureRegion("particle-default").getAtlas());
             particleEffect2.setEmittersCleanUpBlendFunction(false);
             this.f8994d = new ParticleEffectPool(particleEffect2, 1, 16);
             ParticleEffect particleEffect3 = new ParticleEffect();
-            particleEffect3.load(Gdx.files.internal("particles/fire-2.prt"), Game.f8589i.assetManager.getTextureRegion("particle-default").getAtlas());
+            particleEffect3.load(Gdx.files.external("particles/fire-2.prt"), Game.f8589i.assetManager.getTextureRegion("particle-default").getAtlas());
             particleEffect3.setEmittersCleanUpBlendFunction(false);
             this.f8995e = new ParticleEffectPool(particleEffect3, 1, 16);
         }

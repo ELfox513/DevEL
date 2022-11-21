@@ -573,7 +573,7 @@ public class InventoryOverlay implements Disposable {
         rebuildLayoutIfRequired();
         addLayer2.getTable().setVisible(false);
         ParticleEffect particleEffect = new ParticleEffect();
-        particleEffect.load(Gdx.files.internal("particles/decrypting-progress-line.prt"), Game.f8589i.assetManager.getTextureRegion("particle-one").getAtlas());
+        particleEffect.load(Gdx.files.external("particles/decrypting-progress-line.prt"), Game.f8589i.assetManager.getTextureRegion("particle-one").getAtlas());
         particleEffect.setEmittersCleanUpBlendFunction(false);
         this.f14258T = new ParticleEffectPool(particleEffect, 1, 8);
         this.f14276i0 = false;

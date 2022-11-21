@@ -74,11 +74,11 @@ public class BrootEnemy extends Enemy {
         public void setupAssets() {
             this.f9204r = Game.f8589i.assetManager.getTextureRegion("enemy-type-boss-broot");
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/anger.prt"), Game.f8589i.assetManager.getTextureRegion("particle-twist").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/anger.prt"), Game.f8589i.assetManager.getTextureRegion("particle-twist").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f9205s = new ParticleEffectPool(particleEffect, 1, 8);
             ParticleEffect particleEffect2 = new ParticleEffect();
-            particleEffect2.load(Gdx.files.internal("particles/regeneration-once.prt"), Game.f8589i.assetManager.getTextureRegion("particle-plus").getAtlas());
+            particleEffect2.load(Gdx.files.external("particles/regeneration-once.prt"), Game.f8589i.assetManager.getTextureRegion("particle-plus").getAtlas());
             particleEffect2.setEmittersCleanUpBlendFunction(false);
             this.f9206t = new ParticleEffectPool(particleEffect2, 8, 1024);
         }

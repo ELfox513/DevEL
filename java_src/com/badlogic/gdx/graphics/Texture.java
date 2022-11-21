@@ -27,7 +27,7 @@ public class Texture extends GLTexture {
     public TextureData f3947s;
 
     public Texture(String str) {
-        this(Gdx.files.internal(str));
+        this(Gdx.files.external(str));
     }
 
     public static void clearAllTextures(Application application) {

@@ -533,7 +533,7 @@
 
     const-string v13, "particles/pause-menu-ad-icon.prt"
 
-    invoke-interface {v15, v13}, Lcom/badlogic/gdx/Files;->internal(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;
+    invoke-interface {v15, v13}, Lcom/badlogic/gdx/Files;->external(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;
 
     move-result-object v13
 

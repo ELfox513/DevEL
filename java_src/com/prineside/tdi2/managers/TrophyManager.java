@@ -132,7 +132,7 @@ public class TrophyManager extends Manager.ManagerAdapter {
     }
 
     public final void reload() {
-        Iterator<JsonValue> iterator2 = new JsonReader().parse(Gdx.files.internal("res/trophies.json")).iterator2();
+        Iterator<JsonValue> iterator2 = new JsonReader().parse(Gdx.files.external("res/trophies.json")).iterator2();
         int i = 0;
         while (iterator2.hasNext()) {
             JsonValue next = iterator2.next();

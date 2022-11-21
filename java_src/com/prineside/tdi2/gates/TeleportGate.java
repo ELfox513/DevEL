@@ -86,11 +86,11 @@ public class TeleportGate extends Gate {
             this.f9360d = Game.f8589i.assetManager.getTextureRegion("gate-teleport-vertical");
             this.f9361k = Game.f8589i.assetManager.getTextureRegion("gate-teleport-horizontal");
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/teleport-horizontal.prt"), Game.f8589i.assetManager.getTextureRegion("particle-pentagon").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/teleport-horizontal.prt"), Game.f8589i.assetManager.getTextureRegion("particle-pentagon").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f9362p = new ParticleEffectPool(particleEffect, 1, 128);
             ParticleEffect particleEffect2 = new ParticleEffect();
-            particleEffect2.load(Gdx.files.internal("particles/teleport-vertical.prt"), Game.f8589i.assetManager.getTextureRegion("particle-pentagon").getAtlas());
+            particleEffect2.load(Gdx.files.external("particles/teleport-vertical.prt"), Game.f8589i.assetManager.getTextureRegion("particle-pentagon").getAtlas());
             particleEffect2.setEmittersCleanUpBlendFunction(false);
             this.f9363q = new ParticleEffectPool(particleEffect2, 1, 128);
         }

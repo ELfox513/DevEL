@@ -176,16 +176,16 @@ public class MinerManager extends Manager.ManagerAdapter {
         }
         if (Game.f8589i.assetManager != null) {
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/mined-resource.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/mined-resource.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.minedResourceParticleEffectPool = new ParticleEffectPool(particleEffect, 8, 128);
             ParticleEffect particleEffect2 = new ParticleEffect();
-            particleEffect2.load(Gdx.files.internal("particles/miner-double-speed.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
+            particleEffect2.load(Gdx.files.external("particles/miner-double-speed.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
             particleEffect2.setEmittersCleanUpBlendFunction(false);
             this.doubleSpeedParticleEffectPool = new ParticleEffectPool(particleEffect2, 8, 128);
             for (MinerType minerType : MinerType.values) {
                 ParticleEffect particleEffect3 = new ParticleEffect();
-                particleEffect3.load(Gdx.files.internal("particles/building-highlight.prt"), Game.f8589i.assetManager.getTextureRegion("tower-basic-base").getAtlas());
+                particleEffect3.load(Gdx.files.external("particles/building-highlight.prt"), Game.f8589i.assetManager.getTextureRegion("tower-basic-base").getAtlas());
                 particleEffect3.setEmittersCleanUpBlendFunction(false);
                 particleEffect3.getEmitters().first().setSprites(new Array<>(new Sprite[]{new Sprite(Game.f8589i.minerManager.getFactory(minerType).getTexture())}));
                 this.highlightParticles[minerType.ordinal()] = new ParticleEffectPool(particleEffect3, 8, 128);

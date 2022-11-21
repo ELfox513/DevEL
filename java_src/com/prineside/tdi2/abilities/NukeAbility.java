@@ -104,7 +104,7 @@ public class NukeAbility extends Ability {
         @Override // com.prineside.tdi2.Ability.Factory
         public void setupAssets() {
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/nuke-explosion.prt"), Game.f8589i.assetManager.getTextureRegion("particle-shockwave").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/nuke-explosion.prt"), Game.f8589i.assetManager.getTextureRegion("particle-shockwave").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f9025c = new ParticleEffectPool(particleEffect, 1, 8);
         }

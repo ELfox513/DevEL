@@ -603,7 +603,7 @@ public class BitmapFont implements Disposable {
                 for (int i = 0; i < length; i++) {
                     FileHandle fileHandle2 = bitmapFontData.fontFile;
                     if (fileHandle2 == null) {
-                        fileHandle = Gdx.files.internal(bitmapFontData.imagePaths[i]);
+                        fileHandle = Gdx.files.external(bitmapFontData.imagePaths[i]);
                     } else {
                         fileHandle = Gdx.files.getFileHandle(bitmapFontData.imagePaths[i], fileHandle2.type());
                     }

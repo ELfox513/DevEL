@@ -298,7 +298,7 @@ public class AssetManager extends Manager.ManagerAdapter {
         if (local.exists()) {
             return local;
         }
-        return Gdx.files.internal(str);
+        return Gdx.files.external(str);
     }
 
     public void addRegionCharsToFont(BitmapFont bitmapFont, int i) {
@@ -346,7 +346,7 @@ public class AssetManager extends Manager.ManagerAdapter {
 
     public Texture getBannerTexture() {
         if (this.f9567w == null) {
-            Texture texture = new Texture(Gdx.files.internal("res/get-banner.png"), Pixmap.Format.RGBA8888, false);
+            Texture texture = new Texture(Gdx.files.external("res/get-banner.png"), Pixmap.Format.RGBA8888, false);
             this.f9567w = texture;
             Texture.TextureFilter textureFilter = Texture.TextureFilter.Linear;
             texture.setFilter(textureFilter, textureFilter);
@@ -377,7 +377,7 @@ public class AssetManager extends Manager.ManagerAdapter {
     public BitmapFont getDebugFont(boolean z) {
         if (z) {
             if (this.f9564t == null) {
-                BitmapFont bitmapFont = new BitmapFont(Gdx.files.internal("resourcepacks/default/debug.fnt"), getTextureRegion("font-debug"));
+                BitmapFont bitmapFont = new BitmapFont(Gdx.files.external("resourcepacks/default/debug.fnt"), getTextureRegion("font-debug"));
                 this.f9564t = bitmapFont;
                 bitmapFont.getData().markupEnabled = true;
                 this.f9564t.setFixedWidthGlyphs("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+[]\\/?.,`:;'\"<>| ");
@@ -385,7 +385,7 @@ public class AssetManager extends Manager.ManagerAdapter {
             return this.f9564t;
         }
         if (this.f9565u == null) {
-            BitmapFont bitmapFont2 = new BitmapFont(Gdx.files.internal("resourcepacks/default/debug.fnt"), getTextureRegion("font-debug"));
+            BitmapFont bitmapFont2 = new BitmapFont(Gdx.files.external("resourcepacks/default/debug.fnt"), getTextureRegion("font-debug"));
             this.f9565u = bitmapFont2;
             bitmapFont2.getData().markupEnabled = false;
             this.f9565u.setFixedWidthGlyphs("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+[]\\/?.,`:;'\"<>| ");
@@ -443,7 +443,7 @@ public class AssetManager extends Manager.ManagerAdapter {
             if (!Game.f8589i.settingsManager.isThreeDeeModelsEnabled()) {
                 return null;
             }
-            this.f9561q = new G3dModelLoader(new UBJsonReader()).loadModel(Gdx.files.internal("models/scene.g3db"));
+            this.f9561q = new G3dModelLoader(new UBJsonReader()).loadModel(Gdx.files.external("models/scene.g3db"));
             int i = 0;
             while (true) {
                 Array<Material> array = this.f9561q.materials;
@@ -484,7 +484,7 @@ public class AssetManager extends Manager.ManagerAdapter {
     public BitmapFont getSmallDebugFont() {
         if (this.f9566v == null) {
             BitmapFont debugFont = getDebugFont(true);
-            BitmapFont bitmapFont = new BitmapFont(Gdx.files.internal("resourcepacks/default/debug.fnt"), getTextureRegion("font-debug"));
+            BitmapFont bitmapFont = new BitmapFont(Gdx.files.external("resourcepacks/default/debug.fnt"), getTextureRegion("font-debug"));
             this.f9566v = bitmapFont;
             bitmapFont.getData().setScale(0.6667f);
             this.f9566v.getData().markupEnabled = true;

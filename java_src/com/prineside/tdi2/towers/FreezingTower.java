@@ -165,7 +165,7 @@ public class FreezingTower extends Tower {
         public void setupAssets() {
             this.f12255i = Game.f8589i.towerManager.getTextureConfig(TowerType.FREEZING, "weapon");
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/snowflakes.prt"), Game.f8589i.assetManager.getTextureRegion("particle-snowflake").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/snowflakes.prt"), Game.f8589i.assetManager.getTextureRegion("particle-snowflake").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f12257k = new ParticleEffectPool(particleEffect, 8, 1024);
             this.f12256j = Game.f8589i.assetManager.getTextureRegion("unit-type-snowball");

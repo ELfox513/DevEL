@@ -413,10 +413,10 @@ public class ResearchesScreen extends Screen {
         updateStarsCount();
         ParticleEffect particleEffect = new ParticleEffect();
         this.f11048o = particleEffect;
-        particleEffect.load(Gdx.files.internal("particles/research.prt"), Game.f8589i.assetManager.getTextureRegion("icon-research").getAtlas());
+        particleEffect.load(Gdx.files.external("particles/research.prt"), Game.f8589i.assetManager.getTextureRegion("icon-research").getAtlas());
         this.f11048o.setEmittersCleanUpBlendFunction(false);
         ParticleEffect particleEffect2 = new ParticleEffect();
-        particleEffect2.load(Gdx.files.internal("particles/research-completed.prt"), Game.f8589i.assetManager.f9555TR.blank.getAtlas());
+        particleEffect2.load(Gdx.files.external("particles/research-completed.prt"), Game.f8589i.assetManager.f9555TR.blank.getAtlas());
         particleEffect2.setEmittersCleanUpBlendFunction(false);
         this.f11049p = new ParticleEffectPool(particleEffect2, 8, 256);
         Game.f8589i.researchManager.addListener(_researchmanagerlistener);

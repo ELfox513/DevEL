@@ -314,7 +314,7 @@ public class BasicLevel {
             String str = "levels/maps/" + this.name + ".json";
             FileHandle local = Gdx.files.local(str);
             if (!local.exists()) {
-                local = Gdx.files.internal(str);
+                local = Gdx.files.external(str);
             }
             Map fromJson = Map.fromJson(new JsonReader().parse(local));
             this.f8463a = new SoftReference<>(fromJson);

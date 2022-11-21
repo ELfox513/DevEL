@@ -154,7 +154,7 @@ public class CoreTile extends Tile {
             super(TileType.CORE);
             this.f11944d = new TextureRegion[4];
             this.f11945k = new CoreTile[PredefinedCoreTileType.values.length];
-            Iterator<JsonValue> iterator2 = new JsonReader().parse(Gdx.files.internal("res/core-tiles.json")).iterator2();
+            Iterator<JsonValue> iterator2 = new JsonReader().parse(Gdx.files.external("res/core-tiles.json")).iterator2();
             while (iterator2.hasNext()) {
                 JsonValue next = iterator2.next();
                 try {

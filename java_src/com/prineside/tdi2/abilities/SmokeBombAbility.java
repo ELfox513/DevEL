@@ -123,7 +123,7 @@ public class SmokeBombAbility extends Ability {
         @Override // com.prineside.tdi2.Ability.Factory
         public void setupAssets() {
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/ability-poison-cloud.prt"), Game.f8589i.assetManager.getTextureRegion("small-circle").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/ability-poison-cloud.prt"), Game.f8589i.assetManager.getTextureRegion("small-circle").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f9049c = new ParticleEffectPool(particleEffect, 1, 8);
         }

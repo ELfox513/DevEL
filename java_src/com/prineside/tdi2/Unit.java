@@ -68,7 +68,7 @@ public abstract class Unit extends Registrable {
             public BasicAbstractFactory() {
                 if (Game.f8589i.assetManager != null) {
                     ParticleEffect particleEffect = new ParticleEffect();
-                    particleEffect.load(Gdx.files.internal("particles/break.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
+                    particleEffect.load(Gdx.files.external("particles/break.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
                     particleEffect.setEmittersCleanUpBlendFunction(false);
                     particleEffect.getEmitters().get(0).getTint().setColors(new float[]{getColor().f3892r, getColor().f3891g, getColor().f3890b});
                     this.f8949a = new ParticleEffectPool(particleEffect, 256, 4096);

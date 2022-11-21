@@ -878,7 +878,7 @@ public class GameValueManager extends Manager.ManagerAdapter {
         for (GameValueStockConfig gameValueStockConfig : this.f9796d) {
             gameValueStockConfig.stockValue = 0.0d;
         }
-        Iterator<JsonValue> iterator2 = new JsonReader().parse(Gdx.files.internal("res/game-values.json")).iterator2();
+        Iterator<JsonValue> iterator2 = new JsonReader().parse(Gdx.files.external("res/game-values.json")).iterator2();
         while (iterator2.hasNext()) {
             JsonValue next = iterator2.next();
             try {

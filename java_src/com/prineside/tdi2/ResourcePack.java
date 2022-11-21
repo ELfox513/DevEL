@@ -189,7 +189,7 @@ public class ResourcePack implements Disposable {
             while (it.hasNext()) {
                 array.add(getTextureRegion(it.next()));
             }
-            ResourcePackBitmapFont resourcePackBitmapFont = new ResourcePackBitmapFont(this.f8864a ? Gdx.files.internal(this.f8866d) : Gdx.files.local(this.f8866d), array, false);
+            ResourcePackBitmapFont resourcePackBitmapFont = new ResourcePackBitmapFont(this.f8864a ? Gdx.files.external(this.f8866d) : Gdx.files.local(this.f8866d), array, false);
             float fontScaleMultiplier = (i / this.fontResolution) * Game.f8589i.assetManager.getFontScaleMultiplier(i);
             Logger.log("ResourcePack", "=== creating new font, size: " + i + ", resolution: " + this.fontResolution + ", multiplier: " + Game.f8589i.assetManager.getFontScaleMultiplier(i) + ", scale: " + fontScaleMultiplier);
             resourcePackBitmapFont.getData().setScale(fontScaleMultiplier);

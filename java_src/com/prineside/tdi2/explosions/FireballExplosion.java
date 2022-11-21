@@ -52,7 +52,7 @@ public class FireballExplosion extends Explosion {
         @Override // com.prineside.tdi2.Explosion.Factory
         public void setupAssets() {
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/fireball-explosion.prt"), Game.f8589i.assetManager.getTextureRegion("particle-shockwave").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/fireball-explosion.prt"), Game.f8589i.assetManager.getTextureRegion("particle-shockwave").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f9336b = new ParticleEffectPool(particleEffect, 1, 64);
             Logger.log("FireballExplosion", "factory setup");

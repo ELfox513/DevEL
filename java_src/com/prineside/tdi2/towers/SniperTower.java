@@ -183,11 +183,11 @@ public class SniperTower extends Tower {
             this.f12395k = Game.f8589i.assetManager.getTextureRegion("tower-aim");
             this.weaponShadowTexture = new TextureRegionConfig(Game.f8589i.assetManager.getTextureRegion("tower-sniper-weapon-shadow"), 57.0f, 33.0f, 128.0f);
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/crit-hit.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/crit-hit.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f12397m = new ParticleEffectPool(particleEffect, 16, 1024);
             ParticleEffect particleEffect2 = new ParticleEffect();
-            particleEffect2.load(Gdx.files.internal("particles/killshot.prt"), Game.f8589i.assetManager.getTextureRegion("particle-killshot").getAtlas());
+            particleEffect2.load(Gdx.files.external("particles/killshot.prt"), Game.f8589i.assetManager.getTextureRegion("particle-killshot").getAtlas());
             particleEffect2.setEmittersCleanUpBlendFunction(false);
             this.f12398n = new ParticleEffectPool(particleEffect2, 16, 1024);
         }

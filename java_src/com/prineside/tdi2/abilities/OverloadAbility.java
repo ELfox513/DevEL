@@ -139,7 +139,7 @@ public class OverloadAbility extends Ability {
         @Override // com.prineside.tdi2.Ability.Factory
         public void setupAssets() {
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/fire-2.prt"), Game.f8589i.assetManager.getTextureRegion("particle-default").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/fire-2.prt"), Game.f8589i.assetManager.getTextureRegion("particle-default").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f9039c = new ParticleEffectPool(particleEffect, 1, 16);
         }

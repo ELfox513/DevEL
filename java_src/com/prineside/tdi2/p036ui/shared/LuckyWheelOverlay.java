@@ -370,7 +370,7 @@ public class LuckyWheelOverlay {
         this.f14686d.setSize(480.0f, 480.0f);
         this.f14685c.addActor(this.f14686d);
         ParticleEffect particleEffect = new ParticleEffect();
-        particleEffect.load(Gdx.files.internal("particles/lucky-wheel-hit.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
+        particleEffect.load(Gdx.files.external("particles/lucky-wheel-hit.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
         particleEffect.setEmittersCleanUpBlendFunction(false);
         this.f14680D = new ParticleEffectPool(particleEffect, 1, 8);
         PieChartActor pieChartActor = new PieChartActor();

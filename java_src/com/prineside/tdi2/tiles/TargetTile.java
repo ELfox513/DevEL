@@ -409,11 +409,11 @@ public class TargetTile extends Tile {
             this.f12045d = Game.f8589i.assetManager.getTextureRegion("tile-type-target-hollow");
             this.f12046k = Game.f8589i.assetManager.getTextureRegion("tile-type-target-base");
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/base-explosion.prt"), Game.f8589i.assetManager.getTextureRegion("particle-shockwave").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/base-explosion.prt"), Game.f8589i.assetManager.getTextureRegion("particle-shockwave").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f12047p = new ParticleEffectPool(particleEffect, 1, 8);
             ParticleEffect particleEffect2 = new ParticleEffect();
-            particleEffect2.load(Gdx.files.internal("particles/base-hit.prt"), Game.f8589i.assetManager.getTextureRegion("particle-shockwave").getAtlas());
+            particleEffect2.load(Gdx.files.external("particles/base-hit.prt"), Game.f8589i.assetManager.getTextureRegion("particle-shockwave").getAtlas());
             particleEffect2.setEmittersCleanUpBlendFunction(false);
             this.f12048q = new ParticleEffectPool(particleEffect2, 1, 16);
         }

@@ -254,7 +254,7 @@ public class GaussTower extends Tower {
             this.f12287k = Game.f8589i.assetManager.getTextureRegion("dashed-line");
             this.f12288l = Game.f8589i.assetManager.getTextureRegion("bullet-trace-smoke");
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/gauss-shot.prt"), Game.f8589i.assetManager.getTextureRegion("particle-default").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/gauss-shot.prt"), Game.f8589i.assetManager.getTextureRegion("particle-default").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f12290n = new ParticleEffectPool(particleEffect, 4, 128);
             for (ResourceType resourceType : ResourceType.values) {

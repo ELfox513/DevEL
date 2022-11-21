@@ -345,7 +345,7 @@ public class MetaphorBossEnemy extends Enemy {
             this.f9240s = Game.f8589i.assetManager.getTextureRegion("enemy-type-boss-metaphor-body");
             this.f9241t = Game.f8589i.assetManager.getTextureRegion("enemy-type-boss-metaphor-leg");
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/smoke-cloud.prt"), Game.f8589i.assetManager.getTextureRegion("particle-twist").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/smoke-cloud.prt"), Game.f8589i.assetManager.getTextureRegion("particle-twist").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f9242u = new ParticleEffectPool(particleEffect, 1, 8);
         }

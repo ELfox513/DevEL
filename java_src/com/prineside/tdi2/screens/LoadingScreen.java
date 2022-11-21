@@ -236,7 +236,7 @@ public class LoadingScreen extends Screen {
         pixmap.fill();
         this.f10824e = new Texture(pixmap);
         pixmap.dispose();
-        Texture texture = new Texture(Gdx.files.internal("res/loading-brand.png"), format, false);
+        Texture texture = new Texture(Gdx.files.external("res/loading-brand.png"), format, false);
         this.f10822c = texture;
         Texture.TextureFilter textureFilter = Texture.TextureFilter.Linear;
         texture.setFilter(textureFilter, textureFilter);
@@ -251,7 +251,7 @@ public class LoadingScreen extends Screen {
             f = 2.0f;
         }
         this.f10830k = f;
-        Texture texture2 = new Texture(Gdx.files.internal("res/loading-logo.png"), format, false);
+        Texture texture2 = new Texture(Gdx.files.external("res/loading-logo.png"), format, false);
         this.f10821b = texture2;
         texture2.setFilter(textureFilter, textureFilter);
         ScreenViewport screenViewport = new ScreenViewport();

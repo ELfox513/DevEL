@@ -72,7 +72,7 @@ public class VenomProjectile extends EnemyFollowingProjectile {
             this.f10516b = Game.f8589i.assetManager.getTextureRegion("projectile-venom");
             this.f10517d = Game.f8589i.assetManager.getTextureRegion("bullet-trace-thin");
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/venom-projectile.prt"), Game.f8589i.assetManager.getTextureRegion("small-circle").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/venom-projectile.prt"), Game.f8589i.assetManager.getTextureRegion("small-circle").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f10518k = new ParticleEffectPool(particleEffect, 8, 1024);
         }

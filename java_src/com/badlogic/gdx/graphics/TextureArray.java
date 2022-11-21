@@ -31,7 +31,7 @@ public class TextureArray extends GLTexture {
     public static FileHandle[] m24252d(String... strArr) {
         FileHandle[] fileHandleArr = new FileHandle[strArr.length];
         for (int i = 0; i < strArr.length; i++) {
-            fileHandleArr[i] = Gdx.files.internal(strArr[i]);
+            fileHandleArr[i] = Gdx.files.external(strArr[i]);
         }
         return fileHandleArr;
     }

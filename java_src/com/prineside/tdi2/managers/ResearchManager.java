@@ -573,7 +573,7 @@ public class ResearchManager extends Manager.ManagerAdapter {
         this.f10067q = Integer.MIN_VALUE;
         this.f10068r = Integer.MAX_VALUE;
         this.f10069s = Integer.MIN_VALUE;
-        JsonValue parse = new JsonReader().parse(Gdx.files.internal("res/researches.json"));
+        JsonValue parse = new JsonReader().parse(Gdx.files.external("res/researches.json"));
         Iterator<JsonValue> iterator2 = parse.get("categories").iterator2();
         while (iterator2.hasNext()) {
             JsonValue next = iterator2.next();

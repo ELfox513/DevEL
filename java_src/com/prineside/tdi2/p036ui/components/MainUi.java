@@ -410,7 +410,7 @@ public class MainUi implements Disposable {
         iconSize.addActor(this.f13146Y);
         ParticleEffect particleEffect = new ParticleEffect();
         this.f13147Z = particleEffect;
-        particleEffect.load(Gdx.files.internal("particles/pause-menu-ad-icon.prt"), Game.f8589i.assetManager.getTextureRegion("particle-snowflake").getAtlas());
+        particleEffect.load(Gdx.files.external("particles/pause-menu-ad-icon.prt"), Game.f8589i.assetManager.getTextureRegion("particle-snowflake").getAtlas());
         this.f13147Z.setEmittersCleanUpBlendFunction(false);
         Image image = new Image(Game.f8589i.assetManager.getDrawable("ui-pause-button-video-ad-icon"));
         this.f13145X = image;

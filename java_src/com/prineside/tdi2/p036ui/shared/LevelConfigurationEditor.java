@@ -982,7 +982,7 @@ public class LevelConfigurationEditor {
         table.setPosition(200.0f, 0.0f);
         table.add().height(1.0f).expandX().fillX();
         group.addActor(table);
-        Gdx.files.internal("levels/" + this.f14556b.name + ".json").exists();
+        Gdx.files.external("levels/" + this.f14556b.name + ".json").exists();
         Application.ApplicationType type = Gdx.app.getType();
         Application.ApplicationType applicationType = Application.ApplicationType.Desktop;
         boolean z = (type == applicationType || Gdx.app.getType() == Application.ApplicationType.HeadlessDesktop) ? false : false;
@@ -1014,7 +1014,7 @@ public class LevelConfigurationEditor {
                 })).size(150.0f, 40.0f).padLeft(10.0f);
             }
         }
-        Gdx.files.internal("levels/maps/" + this.f14556b.name + ".json").exists();
+        Gdx.files.external("levels/maps/" + this.f14556b.name + ".json").exists();
         boolean z2 = (Gdx.app.getType() == applicationType || Gdx.app.getType() == Application.ApplicationType.HeadlessDesktop) ? false : false;
         boolean exists2 = Gdx.files.local("levels/maps/" + this.f14556b.name + ".json").exists();
         if (contains && z2 && exists2) {

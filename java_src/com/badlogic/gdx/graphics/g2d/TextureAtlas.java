@@ -830,7 +830,7 @@ public class TextureAtlas implements Disposable {
     }
 
     public TextureAtlas(String str) {
-        this(Gdx.files.internal(str));
+        this(Gdx.files.external(str));
     }
 
     public Array<Sprite> createSprites(String str) {

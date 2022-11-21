@@ -153,7 +153,7 @@ public class BlastTower extends Tower {
             this.f12191i = Game.f8589i.towerManager.getTextureConfig(TowerType.BLAST, "weapon");
             this.weaponShadowTexture = new TextureRegionConfig(Game.f8589i.assetManager.getTextureRegion("tower-blast-weapon-shadow"), 63.0f, 31.0f, 128.0f);
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/shockwave.prt"), Game.f8589i.assetManager.getTextureRegion("particle-shockwave").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/shockwave.prt"), Game.f8589i.assetManager.getTextureRegion("particle-shockwave").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f12192j = new ParticleEffectPool(particleEffect, 8, 1024);
         }

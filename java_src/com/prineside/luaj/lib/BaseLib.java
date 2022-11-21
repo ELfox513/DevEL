@@ -748,7 +748,7 @@ public abstract class BaseLib extends TwoArgFunction implements ResourceFinder {
         }
         FileHandle local = Gdx.files.local(str);
         if (!local.exists()) {
-            local = Gdx.files.internal(str);
+            local = Gdx.files.external(str);
         }
         if (!local.exists()) {
             return null;

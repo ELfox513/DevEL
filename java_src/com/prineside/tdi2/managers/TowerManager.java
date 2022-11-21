@@ -499,7 +499,7 @@ public class TowerManager extends Manager.ManagerAdapter {
 
     public void reloadTowerStats() {
         JsonValue jsonValue;
-        Iterator<JsonValue> iterator2 = new JsonReader().parse(Gdx.files.internal("res/tower-stats.json")).iterator2();
+        Iterator<JsonValue> iterator2 = new JsonReader().parse(Gdx.files.external("res/tower-stats.json")).iterator2();
         while (iterator2.hasNext()) {
             JsonValue next = iterator2.next();
             TowerType valueOf = TowerType.valueOf(next.name);
@@ -813,7 +813,7 @@ public class TowerManager extends Manager.ManagerAdapter {
                 throw new RuntimeException("Not all tower factories were created");
             }
         }
-        JsonValue parse = new JsonReader().parse(Gdx.files.internal("res/tower-enemy-attack-matrix.json"));
+        JsonValue parse = new JsonReader().parse(Gdx.files.external("res/tower-enemy-attack-matrix.json"));
         Array array = new Array();
         Iterator<JsonValue> iterator2 = parse.get("columns").iterator2();
         while (iterator2.hasNext()) {
@@ -830,7 +830,7 @@ public class TowerManager extends Manager.ManagerAdapter {
                 i++;
             }
         }
-        JsonValue parse2 = new JsonReader().parse(Gdx.files.internal("res/tower-enemy-damage-matrix.json"));
+        JsonValue parse2 = new JsonReader().parse(Gdx.files.external("res/tower-enemy-damage-matrix.json"));
         Array array2 = new Array();
         Iterator<JsonValue> iterator24 = parse2.get("columns").iterator2();
         while (iterator24.hasNext()) {
@@ -870,20 +870,20 @@ public class TowerManager extends Manager.ManagerAdapter {
         }
         if (Game.f8589i.assetManager != null) {
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/ability-available-mark.prt"), Game.f8589i.assetManager.getTextureRegion("upgrade-arrow-up").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/ability-available-mark.prt"), Game.f8589i.assetManager.getTextureRegion("upgrade-arrow-up").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.abilityAvailableParticleEffectPool = new ParticleEffectPool(particleEffect, 16, 1024);
             ParticleEffect particleEffect2 = new ParticleEffect();
-            particleEffect2.load(Gdx.files.internal("particles/upgrade.prt"), Game.f8589i.assetManager.getTextureRegion("icon-triangle-top").getAtlas());
+            particleEffect2.load(Gdx.files.external("particles/upgrade.prt"), Game.f8589i.assetManager.getTextureRegion("icon-triangle-top").getAtlas());
             particleEffect2.setEmittersCleanUpBlendFunction(false);
             this.upgradeParticles = new ParticleEffectPool(particleEffect2, 8, 512);
             ParticleEffect particleEffect3 = new ParticleEffect();
-            particleEffect3.load(Gdx.files.internal("particles/lvl-up.prt"), Game.f8589i.assetManager.getTextureRegion("icon-lvl-plus").getAtlas());
+            particleEffect3.load(Gdx.files.external("particles/lvl-up.prt"), Game.f8589i.assetManager.getTextureRegion("icon-lvl-plus").getAtlas());
             particleEffect3.setEmittersCleanUpBlendFunction(false);
             this.lvlUpParticles = new ParticleEffectPool(particleEffect3, 8, 512);
             for (TowerType towerType : TowerType.values) {
                 ParticleEffect particleEffect4 = new ParticleEffect();
-                particleEffect4.load(Gdx.files.internal("particles/building-highlight.prt"), Game.f8589i.assetManager.getTextureRegion("tower-basic-base").getAtlas());
+                particleEffect4.load(Gdx.files.external("particles/building-highlight.prt"), Game.f8589i.assetManager.getTextureRegion("tower-basic-base").getAtlas());
                 particleEffect4.setEmittersCleanUpBlendFunction(false);
                 Array<TextureRegionConfig> baseTextures = Game.f8589i.towerManager.getFactory(towerType).getBaseTextures();
                 Array<Sprite> array = new Array<>(Sprite.class);

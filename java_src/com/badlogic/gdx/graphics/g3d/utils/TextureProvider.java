@@ -36,7 +36,7 @@ public interface TextureProvider {
 
         @Override // com.badlogic.gdx.graphics.g3d.utils.TextureProvider
         public Texture load(String str) {
-            Texture texture = new Texture(Gdx.files.internal(str), this.f4912e);
+            Texture texture = new Texture(Gdx.files.external(str), this.f4912e);
             texture.setFilter(this.f4908a, this.f4909b);
             texture.setWrap(this.f4910c, this.f4911d);
             return texture;

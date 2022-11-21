@@ -128,7 +128,7 @@ public class BlizzardAbility extends Ability {
         public void setupAssets() {
             super.setupAssets();
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/blizzard.prt"), Game.f8589i.assetManager.getTextureRegion("particle-default").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/blizzard.prt"), Game.f8589i.assetManager.getTextureRegion("particle-default").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f8980c = new ParticleEffectPool(particleEffect, 1, 8);
         }

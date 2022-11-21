@@ -1445,7 +1445,7 @@ public class LevelSelectScreen extends Screen {
         });
         Game.f8589i.musicManager.continuePlayingMenuMusicTrack();
         ParticleEffect particleEffect = new ParticleEffect();
-        particleEffect.load(Gdx.files.internal("particles/dust-n-sparks-bg.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
+        particleEffect.load(Gdx.files.external("particles/dust-n-sparks-bg.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
         particleEffect.setEmittersCleanUpBlendFunction(false);
         this.f10732g = new ParticleEffectPool(particleEffect, 0, 8);
         ResourcePack.ResourcePackBitmapFont font = Game.f8589i.assetManager.getFont(36);

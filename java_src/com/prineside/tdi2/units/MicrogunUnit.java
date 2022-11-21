@@ -90,7 +90,7 @@ public class MicrogunUnit extends Unit {
             this.f15054b = Game.f8589i.assetManager.getTextureRegion("tower-minigun-microgun-base");
             this.f15055d = Game.f8589i.assetManager.getTextureRegion("tower-minigun-microgun-weapon");
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/building-highlight.prt"), Game.f8589i.assetManager.getTextureRegion("tower-basic-base").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/building-highlight.prt"), Game.f8589i.assetManager.getTextureRegion("tower-basic-base").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             particleEffect.getEmitters().first().setSprites(new Array<>(new Sprite[]{new Sprite(this.f15054b)}));
             this.highlightParticles = new ParticleEffectPool(particleEffect, 2, 64);

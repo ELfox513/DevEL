@@ -174,7 +174,7 @@ public class RegenerationBuffProcessor extends BuffProcessor<RegenerationBuff> {
     public RegenerationBuffProcessor() {
         if (Game.f8589i.assetManager != null) {
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/regeneration.prt"), Game.f8589i.assetManager.getTextureRegion("particle-plus").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/regeneration.prt"), Game.f8589i.assetManager.getTextureRegion("particle-plus").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f9135d = new ParticleEffectPool(particleEffect, 8, 1024);
         }

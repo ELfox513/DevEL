@@ -137,7 +137,7 @@ public class Registry {
     }
 
     public void reload() {
-        Iterator<JsonValue> iterator2 = new JsonReader().parse(Gdx.files.internal("res/enum-registry.json")).iterator2();
+        Iterator<JsonValue> iterator2 = new JsonReader().parse(Gdx.files.external("res/enum-registry.json")).iterator2();
         while (iterator2.hasNext()) {
             JsonValue next = iterator2.next();
             m21907a(next.name);

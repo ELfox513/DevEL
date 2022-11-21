@@ -69,7 +69,7 @@ public class ExplosionManager extends Manager.ManagerAdapter {
         }
         if (Game.f8589i.assetManager != null) {
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/explosion.prt"), Game.f8589i.assetManager.getTextureRegion("particle-shockwave").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/explosion.prt"), Game.f8589i.assetManager.getTextureRegion("particle-shockwave").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.particleEffectPool = new ParticleEffectPool(particleEffect, 8, 1024);
         }

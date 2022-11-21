@@ -7,6 +7,6 @@ import com.badlogic.gdx.files.FileHandle;
 public class InternalFileHandleResolver implements FileHandleResolver {
     @Override // com.badlogic.gdx.assets.loaders.FileHandleResolver
     public FileHandle resolve(String str) {
-        return Gdx.files.internal(str);
+        return Gdx.files.external(str);
     }
 }

@@ -26,15 +26,15 @@ public class MapManager extends Manager.ManagerAdapter {
     public MapManager() {
         if (Game.f8589i.assetManager != null) {
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/highlight.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/highlight.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.highlightParticlesPool = new ParticleEffectPool(particleEffect, 1, 1024);
             ParticleEffect particleEffect2 = new ParticleEffect();
-            particleEffect2.load(Gdx.files.internal("particles/core-highlight.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
+            particleEffect2.load(Gdx.files.external("particles/core-highlight.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
             particleEffect2.setEmittersCleanUpBlendFunction(false);
             this.coreHighlightParticlesPool = new ParticleEffectPool(particleEffect2, 1, 16);
             ParticleEffect particleEffect3 = new ParticleEffect();
-            particleEffect3.load(Gdx.files.internal("particles/tile-warning.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
+            particleEffect3.load(Gdx.files.external("particles/tile-warning.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
             particleEffect3.setEmittersCleanUpBlendFunction(false);
             this.tileWarningParticlePool = new ParticleEffectPool(particleEffect3, 1, 16);
         }

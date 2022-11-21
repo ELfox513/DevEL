@@ -2576,7 +2576,7 @@
 
     const-string v7, "particles/game-over-stars.prt"
 
-    invoke-interface {v5, v7}, Lcom/badlogic/gdx/Files;->internal(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;
+    invoke-interface {v5, v7}, Lcom/badlogic/gdx/Files;->external(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;
 
     move-result-object v5
 

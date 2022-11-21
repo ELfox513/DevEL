@@ -328,7 +328,7 @@ public class CoreMenu {
         createContainer.addActor(this.f12940l);
         ParticleEffect particleEffect = new ParticleEffect();
         this.f12944p = particleEffect;
-        particleEffect.load(Gdx.files.internal("particles/core-menu-upgrade-points-highlight.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
+        particleEffect.load(Gdx.files.external("particles/core-menu-upgrade-points-highlight.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
         this.f12944p.setEmittersCleanUpBlendFunction(false);
         ParticlesCanvas particlesCanvas = new ParticlesCanvas();
         this.f12943o = particlesCanvas;

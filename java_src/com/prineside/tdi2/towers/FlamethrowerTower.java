@@ -180,7 +180,7 @@ public class FlamethrowerTower extends Tower {
         public void setupAssets() {
             this.f12240i = Game.f8589i.towerManager.getTextureConfig(TowerType.FLAMETHROWER, "weapon");
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/flamethrower.prt"), Game.f8589i.assetManager.getTextureRegion("particle-flame").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/flamethrower.prt"), Game.f8589i.assetManager.getTextureRegion("particle-flame").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f12241j = new ParticleEffectPool(particleEffect, 8, 1024);
             this.weaponShadowTexture = new TextureRegionConfig(Game.f8589i.assetManager.getTextureRegion("tower-flamethrower-weapon-shadow"), 64.0f, 29.0f, 128.0f);

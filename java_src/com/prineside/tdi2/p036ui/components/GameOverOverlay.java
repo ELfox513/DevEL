@@ -567,7 +567,7 @@ public class GameOverOverlay implements Disposable {
             this.f13003k.addActor(image3);
             if (i > 0) {
                 ParticleEffect particleEffect = new ParticleEffect();
-                particleEffect.load(Gdx.files.internal("particles/game-over-stars.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
+                particleEffect.load(Gdx.files.external("particles/game-over-stars.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
                 particleEffect.setEmittersCleanUpBlendFunction(false);
                 final ParticleEffectPool particleEffectPool = new ParticleEffectPool(particleEffect, i, 8);
                 ParticleEffectPool.PooledEffect obtain = particleEffectPool.obtain();

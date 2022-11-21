@@ -115,13 +115,13 @@ public class CrashReportScreen extends Screen {
         String str6;
         SpriteBatch spriteBatch = new SpriteBatch();
         this.f10636c = spriteBatch;
-        BitmapFont bitmapFont = new BitmapFont(Gdx.files.internal("resourcepacks/default/futura.fnt"));
+        BitmapFont bitmapFont = new BitmapFont(Gdx.files.external("resourcepacks/default/futura.fnt"));
         this.f10634a = bitmapFont;
         bitmapFont.getData().setScale(bitmapFont.getData().scaleX * 0.5f);
         Texture texture = bitmapFont.getRegion().getTexture();
         Texture.TextureFilter textureFilter = Texture.TextureFilter.Linear;
         texture.setFilter(textureFilter, textureFilter);
-        BitmapFont bitmapFont2 = new BitmapFont(Gdx.files.internal("resourcepacks/default/futura.fnt"));
+        BitmapFont bitmapFont2 = new BitmapFont(Gdx.files.external("resourcepacks/default/futura.fnt"));
         this.f10635b = bitmapFont2;
         bitmapFont2.getData().setScale(bitmapFont2.getData().scaleX * 0.8f);
         bitmapFont2.getRegion().getTexture().setFilter(textureFilter, textureFilter);

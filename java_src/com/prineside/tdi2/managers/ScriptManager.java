@@ -212,7 +212,7 @@ public class ScriptManager extends Manager.ManagerAdapter {
                         }
                     }
                 }
-                for (FileHandle fileHandle2 : Gdx.files.internal("scripts").list()) {
+                for (FileHandle fileHandle2 : Gdx.files.external("scripts").list()) {
                     if (!fileHandle2.isDirectory()) {
                         int i3 = 0;
                         while (true) {
@@ -579,7 +579,7 @@ public class ScriptManager extends Manager.ManagerAdapter {
         }
         ScriptEnvironment scriptEnvironment2 = new ScriptEnvironment(true);
         this.global = scriptEnvironment2;
-        scriptEnvironment2.loadScript(Gdx.files.internal("scripts/utils/global_commands.lua"));
+        scriptEnvironment2.loadScript(Gdx.files.external("scripts/utils/global_commands.lua"));
     }
 
     public int getFreeInstanceId() {

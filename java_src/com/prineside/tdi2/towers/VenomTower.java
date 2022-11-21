@@ -173,7 +173,7 @@ public class VenomTower extends Tower {
         public void setupAssets() {
             this.f12444i = Game.f8589i.towerManager.getTextureConfig(TowerType.VENOM, "weapon");
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/poison-cloud.prt"), Game.f8589i.assetManager.getTextureRegion("small-circle").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/poison-cloud.prt"), Game.f8589i.assetManager.getTextureRegion("small-circle").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f12445j = new ParticleEffectPool(particleEffect, 16, 1024);
             this.weaponShadowTexture = new TextureRegionConfig(Game.f8589i.assetManager.getTextureRegion("tower-venom-weapon-shadow"), 57.0f, 26.0f, 128.0f);

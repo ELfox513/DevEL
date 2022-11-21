@@ -663,7 +663,7 @@ public class UiManager extends Manager.ManagerAdapter implements Game.ScreenResi
         addLayer.getTable().add((Table) group2).expand().fill();
         this.f10220a = addLayer(MainUiLayer.OVERLAY, 1000000, "UiManager safe area");
         ParticleEffect particleEffect = new ParticleEffect();
-        particleEffect.load(Gdx.files.internal("particles/item-cell.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
+        particleEffect.load(Gdx.files.external("particles/item-cell.prt"), Game.f8589i.assetManager.getTextureRegion("particle-triangle").getAtlas());
         particleEffect.setEmittersCleanUpBlendFunction(false);
         this.itemCellFlashParticles = new ParticleEffectPool(particleEffect, 4, 128);
         for (RarityType rarityType : RarityType.values) {

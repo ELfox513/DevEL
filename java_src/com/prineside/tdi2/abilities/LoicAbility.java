@@ -133,7 +133,7 @@ public class LoicAbility extends Ability {
         public void setupAssets() {
             this.f9007c = Game.f8589i.assetManager.getTextureRegion("laser-wide");
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/loic.prt"), Game.f8589i.assetManager.getTextureRegion("particle-default").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/loic.prt"), Game.f8589i.assetManager.getTextureRegion("particle-default").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f9008d = new ParticleEffectPool(particleEffect, 1, 16);
         }

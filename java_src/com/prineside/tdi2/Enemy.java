@@ -232,12 +232,12 @@ public abstract class Enemy extends Registrable implements ScheduledUpdater.Upda
             this.f8564q = "enemy_description_" + enemyType.name();
             if (Game.f8589i.assetManager != null) {
                 ParticleEffect particleEffect = new ParticleEffect();
-                particleEffect.load(Gdx.files.internal("particles/break.prt"), Game.f8589i.assetManager.f9555TR.blank.getAtlas());
+                particleEffect.load(Gdx.files.external("particles/break.prt"), Game.f8589i.assetManager.f9555TR.blank.getAtlas());
                 particleEffect.setEmittersCleanUpBlendFunction(false);
                 particleEffect.getEmitters().get(0).getTint().setColors(new float[]{getColor().f3892r, getColor().f3891g, getColor().f3890b});
                 this.f8559a = new ParticleEffectPool(particleEffect, 64, 2048);
                 ParticleEffect particleEffect2 = new ParticleEffect();
-                particleEffect2.load(Gdx.files.internal("particles/enemy-hit.prt"), Game.f8589i.assetManager.f9555TR.blank.getAtlas());
+                particleEffect2.load(Gdx.files.external("particles/enemy-hit.prt"), Game.f8589i.assetManager.f9555TR.blank.getAtlas());
                 particleEffect2.setEmittersCleanUpBlendFunction(false);
                 particleEffect2.getEmitters().get(0).getTint().setColors(new float[]{getColor().f3892r, getColor().f3891g, getColor().f3890b});
                 this.f8560b = new ParticleEffectPool(particleEffect2, 64, 2048);

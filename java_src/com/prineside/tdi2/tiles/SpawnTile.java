@@ -318,7 +318,7 @@ public class SpawnTile extends Tile {
             this.f12023p = Game.f8589i.assetManager.getTextureRegion("tile-type-spawn-glow");
             this.f12024q = Game.f8589i.assetManager.getTextureRegion("tile-type-spawn-inactive");
             ParticleEffect particleEffect = new ParticleEffect();
-            particleEffect.load(Gdx.files.internal("particles/portal.prt"), Game.f8589i.assetManager.getTextureRegion("particle-twist").getAtlas());
+            particleEffect.load(Gdx.files.external("particles/portal.prt"), Game.f8589i.assetManager.getTextureRegion("particle-twist").getAtlas());
             particleEffect.setEmittersCleanUpBlendFunction(false);
             this.f12025r = new ParticleEffectPool(particleEffect, 1, 128);
         }
