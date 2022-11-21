@@ -140,7 +140,7 @@ public class LoadingScreen extends Screen {
         this.f10827h.add((Table) this.f10829j).width(384.0f).padTop(8.0f).padBottom(120.0f).row();
         this.f10827h.add((Table) new Image(this.f10822c)).size(128.0f).padBottom(32.0f).row();
         StringBuilder sb = new StringBuilder();
-        sb.append("Infinitode 2\nv.R.1.8.7 (b 184)\n");
+        sb.append("Infinitode 2 DevEL Unofficial Patch\nv.R.1.8.7 (b 184) [01]\n");
         sb.append((Runtime.getRuntime().maxMemory() / 1024) / 1024);
         sb.append("Mb / ");
         sb.append(Config.getMaxTextureSize() / 1024);
