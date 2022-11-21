@@ -11,7 +11,8 @@ DevEL is a unofficial patch for [Infinitode 2](https://infinitode.prineside.com/
 * Remove the output of some ad loading errors
 * Fix commands
 * StateEditor
-* CameraTools 
+* CameraTools
+* In-game FAQ and DevEL news
 
 ## How to use
 
