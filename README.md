@@ -20,7 +20,7 @@ DevEL is a unofficial patch for [Infinitode 2](https://infinitode.prineside.com/
 
 ## How to install
 
-1. [Build](#how-to-build) or download patched APK and install it
+1. [Build](#how-to-build) or [download](https://github.com/ELfox513/DevEL-v1.8.7/releases) patched APK and install it
 2. Create the <code>com.prineside.tdi2.devel</code> folder on <code>Android/data</code>. Inside this folder create the folder <code>files</code>
 3. Copy to the "files" folder all the contents of the "assets" folder from the original apk file. **Required the apk of the original version v1.8.7 (build 1187). Using resources from other versions does not guarantee stable**
 4. Done
