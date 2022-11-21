@@ -2,6 +2,17 @@
 
 DevEL is a unofficial patch for [Infinitode 2](https://infinitode.prineside.com/) v.1.8.7 (build 1184) Android version that gives you access to modding mode and adapt it for Android
 
+## TODO feauters
+
+* ~~Move internal path to external path~~
+* ~~Lock normal mode~~
+* Move local path to external path
+* MultiCPU
+* Remove the output of some ad loading errors
+* Fix commands
+* StateEditor
+* CameraTools 
+
 ## How to use
 
   // TODO
