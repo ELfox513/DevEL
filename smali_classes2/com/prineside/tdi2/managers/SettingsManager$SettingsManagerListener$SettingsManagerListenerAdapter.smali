@@ -1,0 +1,41 @@
+.class public abstract Lcom/prineside/tdi2/managers/SettingsManager$SettingsManagerListener$SettingsManagerListenerAdapter;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/prineside/tdi2/managers/SettingsManager$SettingsManagerListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/prineside/tdi2/managers/SettingsManager$SettingsManagerListener;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x409
+    name = "SettingsManagerListenerAdapter"
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public customValueChanged(Lcom/prineside/tdi2/managers/SettingsManager$CustomValueType;D)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public settingsChanged()V
+    .locals 0
+
+    return-void
+.end method

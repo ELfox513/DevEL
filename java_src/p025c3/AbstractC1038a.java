@@ -1,0 +1,30 @@
+package p025c3;
+
+import android.app.Activity;
+import android.content.Context;
+import androidx.annotation.RecentlyNonNull;
+import p168r4.d80;
+import p184t2.AbstractC6715l;
+import p184t2.C6708f;
+import p220x3.C7297q;
+/* renamed from: c3.a */
+/* loaded from: classes.dex */
+public abstract class AbstractC1038a {
+    /* renamed from: b */
+    public abstract void mo12206b(AbstractC6715l abstractC6715l);
+
+    /* renamed from: c */
+    public abstract void mo12205c(boolean z);
+
+    /* renamed from: d */
+    public abstract void mo12204d(@RecentlyNonNull Activity activity);
+
+    /* renamed from: a */
+    public static void m24782a(@RecentlyNonNull Context context, @RecentlyNonNull String str, @RecentlyNonNull C6708f c6708f, @RecentlyNonNull AbstractC1039b abstractC1039b) {
+        C7297q.m1882k(context, "Context cannot be null.");
+        C7297q.m1882k(str, "AdUnitId cannot be null.");
+        C7297q.m1882k(c6708f, "AdRequest cannot be null.");
+        C7297q.m1882k(abstractC1039b, "LoadCallback cannot be null.");
+        new d80(context, str).m12203e(c6708f.m3595a(), abstractC1039b);
+    }
+}

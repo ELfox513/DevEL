@@ -1,0 +1,63 @@
+.class public Lu1/d$d;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ls1/a$b;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lu1/d;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = "d"
+.end annotation
+
+
+# instance fields
+.field public final synthetic a:Lu1/d;
+
+
+# direct methods
+.method public constructor <init>(Lu1/d;)V
+    .locals 0
+
+    iput-object p1, p0, Lu1/d$d;->a:Lu1/d;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lu1/d;Lu1/d$a;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lu1/d$d;-><init>(Lu1/d;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a([Lt1/f;Lt1/f;)V
+    .locals 1
+
+    iget-object p1, p0, Lu1/d$d;->a:Lu1/d;
+
+    invoke-static {p1}, Lu1/d;->b(Lu1/d;)[Lt1/f;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lu1/d$d;->a:Lu1/d;
+
+    invoke-static {v0}, Lu1/d;->c(Lu1/d;)I
+
+    move-result v0
+
+    aput-object p2, p1, v0
+
+    return-void
+.end method

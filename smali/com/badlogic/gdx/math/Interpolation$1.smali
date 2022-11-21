@@ -1,0 +1,32 @@
+.class Lcom/badlogic/gdx/math/Interpolation$1;
+.super Lcom/badlogic/gdx/math/Interpolation;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/badlogic/gdx/math/Interpolation;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/badlogic/gdx/math/Interpolation;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public apply(F)F
+    .locals 0
+
+    return p1
+.end method
