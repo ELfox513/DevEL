@@ -8,4 +8,6 @@ DevEL is a fun patch for [Infinitode 2](https://infinitode.prineside.com/) v.1.8
 
 ## How to install
 
+1. [Build]
+
 ## How to build
