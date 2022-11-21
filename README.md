@@ -9,7 +9,7 @@ DevEL is a unofficial patch for [Infinitode 2](https://infinitode.prineside.com/
 ## How to install
 
 1. [Build](#how-to-build) or download patched APK and install it
-2. Create a <code>com.prineside.tdi2.devel</code> folder in Android lan. Inside the nnn folder create a folder "dbct"
+2. Create a <code>com.prineside.tdi2.devel</code> folder on <code>Android/data</code>. Inside thisfolder create a folder <code>files</code>
 3. 
 
 ## How to build
