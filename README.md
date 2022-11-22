@@ -9,8 +9,6 @@ DevEL is a unofficial patch for [Infinitode 2](https://infinitode.prineside.com/
 * Move local path to external path
 * Remove the output of some ad loading errors
 
-## Planned but not necessarily done
-
 *These features will be implemented depending on how many people will use this patch*
 * In-game FAQ and DevEL news
 * Additional screen if the patch is launched without resources
