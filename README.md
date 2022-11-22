@@ -11,6 +11,7 @@ DevEL is a unofficial patch for [Infinitode 2](https://infinitode.prineside.com/
 
 ## Planned but not necessarily done
 
+*These features will be implemented depending on how many people will use this patch*
 * In-game FAQ and DevEL news
 * Additional screen if the patch is launched without resources
 * StateEditor
