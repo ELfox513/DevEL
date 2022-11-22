@@ -549,7 +549,7 @@
 
     const-string v0, "cache/crash-report.json"
 
-    invoke-interface {p1, v0}, Lcom/badlogic/gdx/Files;->local(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;
+    invoke-interface {p1, v0}, Lcom/badlogic/gdx/Files;->external(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;
 
     move-result-object p1
 

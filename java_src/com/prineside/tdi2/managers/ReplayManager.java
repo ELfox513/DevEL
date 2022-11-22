@@ -341,7 +341,7 @@ public class ReplayManager extends Manager.ManagerAdapter {
         /* renamed from: b */
         public final void m21517b() {
             if (!this.f10049a) {
-                FileHandle local = Gdx.files.local("cache/replays/" + this.f10052id + ".rpl");
+                FileHandle local = Gdx.files.external("cache/replays/" + this.f10052id + ".rpl");
                 if (local.exists() && !local.isDirectory()) {
                     m21518a(new FixedInput(local.readBytes()), true);
                 } else {
@@ -614,7 +614,7 @@ public class ReplayManager extends Manager.ManagerAdapter {
     public Array<String> getAllRecordIds() {
         FileHandle[] list;
         Array<String> array = new Array<>(String.class);
-        FileHandle local = Gdx.files.local("cache/replays/");
+        FileHandle local = Gdx.files.external("cache/replays/");
         if (local.exists() && local.isDirectory()) {
             for (FileHandle fileHandle : local.list()) {
                 if (fileHandle.name().endsWith(".rpl")) {
@@ -634,7 +634,7 @@ public class ReplayManager extends Manager.ManagerAdapter {
             this.f10031b.remove(str);
         }
         if (!str.contains(".")) {
-            FileHandle local = Gdx.files.local("cache/replays/" + str + ".rpl");
+            FileHandle local = Gdx.files.external("cache/replays/" + str + ".rpl");
             if (local.exists() && !local.isDirectory()) {
                 try {
                     byte[] readBytes = local.readBytes();

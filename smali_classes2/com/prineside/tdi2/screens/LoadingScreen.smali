@@ -41,7 +41,7 @@
 
     const-string v1, "cache/enable-fast-loading-B184.txt"
 
-    invoke-interface {v0, v1}, Lcom/badlogic/gdx/Files;->local(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;
+    invoke-interface {v0, v1}, Lcom/badlogic/gdx/Files;->external(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;
 
     move-result-object v0
 
@@ -90,9 +90,9 @@
 
     sget-object v1, Lcom/badlogic/gdx/Gdx;->files:Lcom/badlogic/gdx/Files;
 
-    const-string v2, "res/loading-brand.png"
+    const-string v2, "loading-brand.png"
 
-    invoke-interface {v1, v2}, Lcom/badlogic/gdx/Files;->external(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;
+    invoke-interface {v1, v2}, Lcom/badlogic/gdx/Files;->internal(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;
 
     move-result-object v1
 
@@ -141,9 +141,9 @@
 
     sget-object v3, Lcom/badlogic/gdx/Gdx;->files:Lcom/badlogic/gdx/Files;
 
-    const-string v4, "res/loading-logo.png"
+    const-string v4, "loading-logo.png"
 
-    invoke-interface {v3, v4}, Lcom/badlogic/gdx/Files;->external(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;
+    invoke-interface {v3, v4}, Lcom/badlogic/gdx/Files;->internal(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;
 
     move-result-object v3
 
@@ -355,7 +355,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "Infinitode 2 DevEL Unofficial Patch\nv.R.1.8.7 (b 184) [01]\n"
+    const-string v6, "Infinitode 2 DevEL Unofficial Patch\nv.R.1.8.7 (b 184) [02]\n"
 
     invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

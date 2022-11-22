@@ -178,7 +178,7 @@ public class HeadlessReplayValidationGame extends Game {
     }
 
     public boolean checkServerHalted() {
-        if (Gdx.files.local("halt.txt").exists()) {
+        if (Gdx.files.external("halt.txt").exists()) {
             Logger.log("HeadlessReplayValidationGame", "halt.txt found, exiting");
             writeServerStatus("halted");
             Gdx.app.exit();
@@ -241,7 +241,7 @@ public class HeadlessReplayValidationGame extends Game {
         final long timestampMillis = Game.getTimestampMillis();
         Net.HttpRequest httpRequest = new Net.HttpRequest(Net.HttpMethods.POST);
         String str = Config.SITE_URL + "/?m=api&a=getReplayForValidation" + Config.SITE_SHARED_GET_PART;
-        if (Gdx.files.local("endless.txt").exists()) {
+        if (Gdx.files.external("endless.txt").exists()) {
             str = str + "&e=1";
         }
         httpRequest.setUrl(str);

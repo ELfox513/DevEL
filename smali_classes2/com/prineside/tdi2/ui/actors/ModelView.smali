@@ -310,7 +310,7 @@
 
     iget-object v2, p0, Lcom/prineside/tdi2/ui/actors/ModelView;->L:Ljava/lang/String;
 
-    invoke-interface {p1, v2}, Lcom/badlogic/gdx/Files;->local(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;
+    invoke-interface {p1, v2}, Lcom/badlogic/gdx/Files;->external(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;
 
     move-result-object p1
 

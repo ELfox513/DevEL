@@ -1465,7 +1465,7 @@ public class AndroidLauncher extends AndroidApplication {
         AbstractC1038a.m24782a(this, Config.ANDROID_INTERSTITIAL_AD_ID, m3592c, new AbstractC1039b() { // from class: com.prineside.tdi2.AndroidLauncher.6
             @Override // p184t2.AbstractC6705d
             public void onAdFailedToLoad(C6716m c6716m) {
-                Logger.log("AndroidLauncher", "loadNextInterstitialAd onAdFailedToLoad " + c6716m.m3611c() + ", " + c6716m + ", " + c6716m.m3562f() + ", trying again in 10 seconds");
+                Logger.log("AndroidLauncher", "loadNextInterstitialAd onAdFailedToLoad " + c6716m.m3611c() + ", " + c6716m + ", " + c6716m.m3562f() + ", trying again in 10 seconds (No retries! Stop messing up my console!)");
                 AndroidLauncher.this.f8425r = null;
                 ActionResolverAndroid m22189V = AndroidLauncher.this.m22189V();
                 StringBuilder sb = new StringBuilder();
@@ -1473,12 +1473,6 @@ public class AndroidLauncher extends AndroidApplication {
                 sb.append(",");
                 sb.append(String.valueOf(c6716m.m3562f()));
                 m22189V.logCustomEvent("ad_load_failure", new String[]{"ad_format", "interstitial", "time", String.valueOf(Game.getTimestampMillis() - timestampMillis), "error", sb.toString()});
-                Timer.schedule(new Timer.Task() { // from class: com.prineside.tdi2.AndroidLauncher.6.2
-                    @Override // com.badlogic.gdx.utils.Timer.Task, java.lang.Runnable
-                    public void run() {
-                        AndroidLauncher.this.m22158n0();
-                    }
-                }, 10.0f);
             }
 
             @Override // p184t2.AbstractC6705d
@@ -1713,24 +1707,12 @@ public class AndroidLauncher extends AndroidApplication {
 
     /* renamed from: n0 */
     public final void m22158n0() {
-        Logger.log("AndroidLauncher", "loadNextAd called");
-        runOnUiThread(new Runnable() { // from class: com.prineside.tdi2.c
-            @Override // java.lang.Runnable
-            public final void run() {
-                AndroidLauncher.this.m22185Z();
-            }
-        });
+        Logger.log("AndroidLauncher", "loadNextAd NOT called, hehe");
     }
 
     /* renamed from: o0 */
     public final void m22156o0() {
-        Logger.log("AndroidLauncher", "loadNextInterstitialAd called");
-        runOnUiThread(new Runnable() { // from class: com.prineside.tdi2.j
-            @Override // java.lang.Runnable
-            public final void run() {
-                AndroidLauncher.this.m22184a0();
-            }
-        });
+        Logger.log("AndroidLauncher", "loadNextInterstitialAd NOT called, hehe");
     }
 
     @Override // com.badlogic.gdx.backends.android.AndroidApplication, android.app.Activity
@@ -1909,13 +1891,7 @@ public class AndroidLauncher extends AndroidApplication {
 
     /* renamed from: p0 */
     public final void m22154p0() {
-        Logger.log("AndroidLauncher", "loadNextRewardedInterstitialAd called");
-        runOnUiThread(new Runnable() { // from class: com.prineside.tdi2.i
-            @Override // java.lang.Runnable
-            public final void run() {
-                AndroidLauncher.this.m22182b0();
-            }
-        });
+        Logger.log("AndroidLauncher", "loadNextRewardedInterstitialAd NOT called, hehe");
     }
 
     /* renamed from: q0 */

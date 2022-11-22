@@ -34,7 +34,7 @@ public class HeadlessNetTestingGame extends Game {
     public int f8669s;
 
     public boolean checkServerHalted() {
-        if (Gdx.files.local("halt-net.txt").exists()) {
+        if (Gdx.files.external("halt-net.txt").exists()) {
             Logger.log("HeadlessReplayValidationGame", "halt-net.txt found, exiting");
             writeServerStatus("halted");
             Gdx.app.exit();
@@ -46,7 +46,7 @@ public class HeadlessNetTestingGame extends Game {
 
     public void writeServerStatus(String str) {
         if (this.f8663l == null) {
-            this.f8663l = Gdx.files.local("status-net-test.txt");
+            this.f8663l = Gdx.files.external("status-net-test.txt");
         }
         int maxMemory = (int) ((((float) Runtime.getRuntime().maxMemory()) / 1024.0f) / 1024.0f);
         FileHandle fileHandle = this.f8663l;

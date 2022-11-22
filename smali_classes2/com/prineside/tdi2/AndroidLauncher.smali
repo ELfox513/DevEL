@@ -1676,15 +1676,9 @@
 
     const-string v0, "AndroidLauncher"
 
-    const-string v1, "loadNextAd called"
+    const-string v1, "loadNextAd NOT called, hehe"
 
     invoke-static {v0, v1}, Lcom/prineside/tdi2/Logger;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Lcom/prineside/tdi2/c;
-
-    invoke-direct {v0, p0}, Lcom/prineside/tdi2/c;-><init>(Lcom/prineside/tdi2/AndroidLauncher;)V
-
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -1694,15 +1688,9 @@
 
     const-string v0, "AndroidLauncher"
 
-    const-string v1, "loadNextInterstitialAd called"
+    const-string v1, "loadNextInterstitialAd NOT called, hehe"
 
     invoke-static {v0, v1}, Lcom/prineside/tdi2/Logger;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Lcom/prineside/tdi2/j;
-
-    invoke-direct {v0, p0}, Lcom/prineside/tdi2/j;-><init>(Lcom/prineside/tdi2/AndroidLauncher;)V
-
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -2485,15 +2473,9 @@
 
     const-string v0, "AndroidLauncher"
 
-    const-string v1, "loadNextRewardedInterstitialAd called"
+    const-string v1, "loadNextRewardedInterstitialAd NOT called, hehe"
 
     invoke-static {v0, v1}, Lcom/prineside/tdi2/Logger;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Lcom/prineside/tdi2/i;
-
-    invoke-direct {v0, p0}, Lcom/prineside/tdi2/i;-><init>(Lcom/prineside/tdi2/AndroidLauncher;)V
-
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method

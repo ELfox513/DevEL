@@ -56,8 +56,8 @@ public class AndroidCachedMusicManager extends CachedMusicManager {
             str = null;
         }
         String m21434q = CachedMusicManager.m21434q(module, true);
-        this.f8406K = new CachedAndroidMusic(Gdx.files.local(m21434q));
-        CachedAndroidMusic cachedAndroidMusic = new CachedAndroidMusic(Gdx.files.local(m21434q));
+        this.f8406K = new CachedAndroidMusic(Gdx.files.external(m21434q));
+        CachedAndroidMusic cachedAndroidMusic = new CachedAndroidMusic(Gdx.files.external(m21434q));
         this.f8407L = cachedAndroidMusic;
         this.f8406K.player.setNextMediaPlayer(cachedAndroidMusic.player);
         this.f8406K.player.setOnCompletionListener(this.f8409N);
@@ -68,7 +68,7 @@ public class AndroidCachedMusicManager extends CachedMusicManager {
             this.f8406K.setVolume(f);
             return;
         }
-        CachedAndroidMusic cachedAndroidMusic2 = new CachedAndroidMusic(Gdx.files.local(str));
+        CachedAndroidMusic cachedAndroidMusic2 = new CachedAndroidMusic(Gdx.files.external(str));
         this.f8405J = cachedAndroidMusic2;
         cachedAndroidMusic2.player.setNextMediaPlayer(this.f8406K.player);
         this.f8405J.play();

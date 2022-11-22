@@ -196,7 +196,7 @@ public class TrophyManager extends Manager.ManagerAdapter {
             byte[] frameBufferPixels = ScreenUtils.getFrameBufferPixels(0, 0, frameBuffer.getWidth(), frameBuffer.getHeight(), true);
             Pixmap pixmap = new Pixmap(frameBuffer.getWidth(), frameBuffer.getHeight(), Pixmap.Format.RGBA8888);
             BufferUtils.copy(frameBufferPixels, 0, (Buffer) pixmap.getPixels(), frameBufferPixels.length);
-            PixmapIO.writePNG(Gdx.files.local(str2), pixmap);
+            PixmapIO.writePNG(Gdx.files.external(str2), pixmap);
             pixmap.dispose();
             frameBuffer.end();
             i2++;

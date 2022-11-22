@@ -25,17 +25,17 @@ public class DesktopCachedMusicManager extends CachedMusicManager {
         }
         String m21434q = CachedMusicManager.m21434q(module, true);
         if (str == null) {
-            Music newMusic = Gdx.audio.newMusic(Gdx.files.local(m21434q));
+            Music newMusic = Gdx.audio.newMusic(Gdx.files.external(m21434q));
             this.f10287K = newMusic;
             newMusic.setVolume(f * m21576c());
             this.f10287K.setLooping(true);
             this.f10287K.play();
             return;
         }
-        Music newMusic2 = Gdx.audio.newMusic(Gdx.files.local(str));
+        Music newMusic2 = Gdx.audio.newMusic(Gdx.files.external(str));
         this.f10286J = newMusic2;
         newMusic2.setVolume(m21576c() * f);
-        Music newMusic3 = Gdx.audio.newMusic(Gdx.files.local(m21434q));
+        Music newMusic3 = Gdx.audio.newMusic(Gdx.files.external(m21434q));
         this.f10287K = newMusic3;
         newMusic3.setVolume(f * m21576c());
         this.f10286J.setOnCompletionListener(new Music.OnCompletionListener() { // from class: com.prineside.tdi2.managers.music.DesktopCachedMusicManager.1

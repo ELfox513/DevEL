@@ -166,7 +166,7 @@ public class HeadlessReplayCleanupGame extends Game {
     }
 
     public boolean checkServerHalted() {
-        if (Gdx.files.local("halt.txt").exists()) {
+        if (Gdx.files.external("halt.txt").exists()) {
             Logger.log("HeadlessReplayCleanupGame", "halt.txt found, exiting");
             writeServerStatus("halted");
             Gdx.app.exit();
@@ -217,7 +217,7 @@ public class HeadlessReplayCleanupGame extends Game {
 
     public void writeServerStatus(String str) {
         if (this.f8671l == null) {
-            this.f8671l = Gdx.files.local("status.txt");
+            this.f8671l = Gdx.files.external("status.txt");
         }
         int maxMemory = (int) ((((float) Runtime.getRuntime().maxMemory()) / 1024.0f) / 1024.0f);
         FileHandle fileHandle = this.f8671l;

@@ -717,8 +717,8 @@ public class GameStateSystem extends StateSystem {
             return;
         }
         try {
-            if (Gdx.files.local(SAVED_GAME_FILE_PATH).exists()) {
-                Gdx.files.local(SAVED_GAME_FILE_PATH).delete();
+            if (Gdx.files.external(SAVED_GAME_FILE_PATH).exists()) {
+                Gdx.files.external(SAVED_GAME_FILE_PATH).delete();
             }
         } catch (Exception e) {
             Logger.error("GameStateSystem", "failed to delete saved game", e);
@@ -729,7 +729,7 @@ public class GameStateSystem extends StateSystem {
     /* renamed from: f */
     public /* synthetic */ void m21035f() {
         try {
-            FileHandle local = Gdx.files.local(SAVED_GAME_FILE_PATH);
+            FileHandle local = Gdx.files.external(SAVED_GAME_FILE_PATH);
             synchronized (this.f11471Q) {
                 local.writeBytes(this.f11469O, 0, this.f11470P, false);
             }
@@ -759,7 +759,7 @@ public class GameStateSystem extends StateSystem {
     }
 
     public static boolean savedGameExists() {
-        FileHandle local = Gdx.files.local(SAVED_GAME_FILE_PATH);
+        FileHandle local = Gdx.files.external(SAVED_GAME_FILE_PATH);
         if (!local.exists()) {
             return false;
         }

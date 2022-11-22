@@ -66,7 +66,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", trying again in 10 seconds"
+    const-string v1, ", trying again in 10 seconds (No retries! Stop messing up my console!)"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -169,14 +169,6 @@
     const-string p1, "ad_load_failure"
 
     invoke-virtual {v0, p1, v1}, Lcom/prineside/tdi2/AndroidLauncher$ActionResolverAndroid;->logCustomEvent(Ljava/lang/String;[Ljava/lang/String;)V
-
-    new-instance p1, Lcom/prineside/tdi2/AndroidLauncher$6$2;
-
-    invoke-direct {p1, p0}, Lcom/prineside/tdi2/AndroidLauncher$6$2;-><init>(Lcom/prineside/tdi2/AndroidLauncher$6;)V
-
-    const/high16 v0, 0x41200000    # 10.0f
-
-    invoke-static {p1, v0}, Lcom/badlogic/gdx/utils/Timer;->schedule(Lcom/badlogic/gdx/utils/Timer$Task;F)Lcom/badlogic/gdx/utils/Timer$Task;
 
     return-void
 .end method

@@ -63,7 +63,7 @@
 
     iget-object v3, p0, Lcom/prineside/tdi2/managers/AssetManager$2;->b:Ljava/lang/String;
 
-    invoke-interface {v2, v3}, Lcom/badlogic/gdx/Files;->local(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;
+    invoke-interface {v2, v3}, Lcom/badlogic/gdx/Files;->external(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;
 
     move-result-object v2
 
@@ -117,7 +117,7 @@
 
     iget-object v3, p0, Lcom/prineside/tdi2/managers/AssetManager$2;->b:Ljava/lang/String;
 
-    invoke-interface {v1, v3}, Lcom/badlogic/gdx/Files;->local(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;
+    invoke-interface {v1, v3}, Lcom/badlogic/gdx/Files;->external(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;
 
     move-result-object v1
 

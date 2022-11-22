@@ -91,7 +91,7 @@ public class CrashReportScreen extends Screen {
         this.f10637d.draw();
         if (Gdx.input.isTouched() || Gdx.input.isKeyPressed(-1)) {
             try {
-                Gdx.files.local("cache/crash-report.json").delete();
+                Gdx.files.external("cache/crash-report.json").delete();
             } catch (Exception unused) {
                 Logger.error("CrashReportScreen", "failed to delete crash report");
             }

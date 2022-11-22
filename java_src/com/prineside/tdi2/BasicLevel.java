@@ -312,7 +312,7 @@ public class BasicLevel {
         }
         try {
             String str = "levels/maps/" + this.name + ".json";
-            FileHandle local = Gdx.files.local(str);
+            FileHandle local = Gdx.files.external(str);
             if (!local.exists()) {
                 local = Gdx.files.external(str);
             }

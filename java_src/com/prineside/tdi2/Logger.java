@@ -427,7 +427,7 @@ public class Logger {
                 }
                 json.writeValue("stderr", byteArrayOutputStream);
                 json.writeObjectEnd();
-                Gdx.files.local("cache/crash-report.json").writeString(stringWriter.toString(), false, "UTF-8");
+                Gdx.files.external("cache/crash-report.json").writeString(stringWriter.toString(), false, "UTF-8");
             } catch (Exception e) {
                 System.err.println("failed to write crash report:" + e.getMessage());
             }
@@ -450,7 +450,7 @@ public class Logger {
         }
         try {
             if (Config.isHeadless() || Gdx.app.getType() == Application.ApplicationType.Desktop) {
-                PrintWriter printWriter = new PrintWriter(Gdx.files.local("exceptions.log").write(true));
+                PrintWriter printWriter = new PrintWriter(Gdx.files.external("exceptions.log").write(true));
                 printWriter.append("Exception in thread ").append((CharSequence) thread.getName()).append(":\n");
                 th.printStackTrace(printWriter);
                 Game game = Game.f8589i;
@@ -491,17 +491,17 @@ public class Logger {
         } else {
             str = "log.txt";
         }
-        if (Gdx.files.local(str + ".1").exists()) {
+        if (Gdx.files.external(str + ".1").exists()) {
             m21947f(str + ".1", str + ".1.zip", str);
         }
         for (int i = 4; i >= 1; i--) {
             String str2 = str + "." + i + ".zip";
-            if (Gdx.files.local(str2).exists()) {
-                Gdx.files.local(str2).moveTo(Gdx.files.local(str + "." + (i + 1) + ".zip"));
+            if (Gdx.files.external(str2).exists()) {
+                Gdx.files.external(str2).moveTo(Gdx.files.external(str + "." + (i + 1) + ".zip"));
             }
         }
-        if (Gdx.files.local(str).exists()) {
-            Gdx.files.local(str).moveTo(Gdx.files.local(str + ".1"));
+        if (Gdx.files.external(str).exists()) {
+            Gdx.files.external(str).moveTo(Gdx.files.external(str + ".1"));
         }
     }
 

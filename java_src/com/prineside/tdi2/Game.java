@@ -174,7 +174,7 @@ public abstract class Game extends com.badlogic.gdx.Game {
         public void gameLoaded() {
             new I18nGenerator().run();
             CharArray allLocalesChars = this.f8600a.localeManager.getAllLocalesChars();
-            String readString = Gdx.files.local("i18n/extra-chars.txt").readString("UTF-8");
+            String readString = Gdx.files.external("i18n/extra-chars.txt").readString("UTF-8");
             for (int i = 0; i < readString.length(); i++) {
                 char charAt = readString.charAt(i);
                 if (charAt != '\n' && charAt != '\r' && !allLocalesChars.contains(charAt)) {
@@ -182,7 +182,7 @@ public abstract class Game extends com.badlogic.gdx.Game {
                 }
             }
             allLocalesChars.sort();
-            Gdx.files.local("i18n/all-chars.txt").writeString(new String(allLocalesChars.toArray()), false, "UTF-8");
+            Gdx.files.external("i18n/all-chars.txt").writeString(new String(allLocalesChars.toArray()), false, "UTF-8");
             new GameResourcesJsonGenerator().run();
         }
     }

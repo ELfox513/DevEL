@@ -183,10 +183,10 @@ public abstract class CachedMusicManager extends MusicManager {
     }
 
     public static boolean isMusicCached(Module module) {
-        if (module.restartPos != 0 && !Gdx.files.local(m21434q(module, false)).exists()) {
+        if (module.restartPos != 0 && !Gdx.files.external(m21434q(module, false)).exists()) {
             return false;
         }
-        return Gdx.files.local(m21434q(module, true)).exists();
+        return Gdx.files.external(m21434q(module, true)).exists();
     }
 
     /* renamed from: o */
@@ -198,7 +198,7 @@ public abstract class CachedMusicManager extends MusicManager {
             return;
         }
         long j = 0;
-        FileHandle local = Gdx.files.local("cache/music/");
+        FileHandle local = Gdx.files.external("cache/music/");
         if (local.exists() && local.isDirectory()) {
             for (FileHandle fileHandle : local.list()) {
                 try {
@@ -334,7 +334,7 @@ public abstract class CachedMusicManager extends MusicManager {
                 if (module.restartPos != 0 && !Thread.currentThread().isInterrupted()) {
                     WavInputStream wavInputStream = new WavInputStream(ibxm, 0, WavInputStream.Mode.INTRO_PART);
                     String m21434q = CachedMusicManager.m21434q(module, false);
-                    OutputStream write = Gdx.files.local(m21434q).write(false);
+                    OutputStream write = Gdx.files.external(m21434q).write(false);
                     int i = 0;
                     while (true) {
                         try {
@@ -355,7 +355,7 @@ public abstract class CachedMusicManager extends MusicManager {
                 if (!Thread.currentThread().isInterrupted()) {
                     WavInputStream wavInputStream2 = new WavInputStream(ibxm, 0, WavInputStream.Mode.LOOPING_PART);
                     String m21434q2 = CachedMusicManager.m21434q(module, true);
-                    OutputStream write2 = Gdx.files.local(m21434q2).write(false);
+                    OutputStream write2 = Gdx.files.external(m21434q2).write(false);
                     int i2 = 0;
                     while (true) {
                         try {

@@ -14,13 +14,13 @@ public class NormalGame extends Game {
     @Override // com.prineside.tdi2.Game, com.badlogic.gdx.ApplicationListener
     public void create() {
         super.create();
-        FileHandle local = Gdx.files.local("cache/crash-report.json");
+        FileHandle local = Gdx.files.external("cache/crash-report.json");
         if (local.exists()) {
             JsonValue parse = new JsonReader().parse(local.readString("UTF-8"));
             this.screenManager.goToCrashReportScreen(parse.getString("type", ""), parse.getString("thread", ""), parse.getString("message", ""), parse.getString("stacktrace", ""), parse.getString("stderr", ""));
             return;
         }
-        FileHandle local2 = Gdx.files.local("cache/space.bin");
+        FileHandle local2 = Gdx.files.external("cache/space.bin");
         if (!local2.exists()) {
             byte[] bArr = new byte[1024];
             Arrays.fill(bArr, (byte) -1);

@@ -135,17 +135,7 @@
 
     invoke-virtual {v1}, Lcom/badlogic/gdx/scenes/scene2d/ui/Table;->row()Lcom/badlogic/gdx/scenes/scene2d/ui/Cell;
 
-    sget-object v5, Lcom/prineside/tdi2/Game;->i:Lcom/prineside/tdi2/Game;
-
-    iget-object v5, v5, Lcom/prineside/tdi2/Game;->localeManager:Lcom/prineside/tdi2/managers/LocaleManager;
-
-    iget-object v5, v5, Lcom/prineside/tdi2/managers/LocaleManager;->i18n:Lcom/prineside/tdi2/utils/I18NBundle;
-
-    const-string v7, "game_name"
-
-    invoke-virtual {v5, v7}, Lcom/prineside/tdi2/utils/I18NBundle;->get(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
+    const-string v5, "Infinitode 2 DevEL Unofficial patch by ELfox"
 
     new-instance v7, Lcom/badlogic/gdx/scenes/scene2d/ui/Label;
 
@@ -189,7 +179,7 @@
 
     new-instance v5, Lcom/badlogic/gdx/scenes/scene2d/ui/Label;
 
-    const-string v9, "R.1.8.7 (build 184)"
+    const-string v9, "R.1.8.7 (build 184) [02]"
 
     invoke-direct {v5, v9, v2}, Lcom/badlogic/gdx/scenes/scene2d/ui/Label;-><init>(Ljava/lang/CharSequence;Lcom/badlogic/gdx/scenes/scene2d/ui/Label$LabelStyle;)V
 

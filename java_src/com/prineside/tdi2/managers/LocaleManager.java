@@ -127,7 +127,7 @@ public class LocaleManager extends Manager.ManagerAdapter {
         for (int i2 = 0; i2 < array.size; i2++) {
             try {
                 Logger.log("LocaleManager", "getting chars from " + ((String) array.get(i2)));
-                FileHandle local = Gdx.files.local((String) array.get(i2));
+                FileHandle local = Gdx.files.external((String) array.get(i2));
                 ObjectMap objectMap = new ObjectMap();
                 PropertiesUtils.load(objectMap, local.reader("UTF-8"));
                 CharArray charArray4 = new CharArray();
@@ -205,7 +205,7 @@ public class LocaleManager extends Manager.ManagerAdapter {
         preferencesManager.set("locale", str);
         preferencesManager.flush();
         String[] split = str.split(JavaConstant.Dynamic.DEFAULT_NAME);
-        this.i18n = I18NBundle.createBundle(Gdx.files.local("i18n/MainBundle"), new java.util.Locale(split[0], split[1]));
+        this.i18n = I18NBundle.createBundle(Gdx.files.external("i18n/MainBundle"), new java.util.Locale(split[0], split[1]));
         Logger.log("LocaleManager", "Locale set to '" + str + "'");
         m21581c();
         if (z) {
@@ -226,7 +226,7 @@ public class LocaleManager extends Manager.ManagerAdapter {
                 preferencesManager.flush();
             }
         }
-        this.i18n = I18NBundle.createBundle(Gdx.files.local("i18n/MainBundle"), locale);
+        this.i18n = I18NBundle.createBundle(Gdx.files.external("i18n/MainBundle"), locale);
         String str = this.i18n.getLocale().getLanguage() + JavaConstant.Dynamic.DEFAULT_NAME + this.i18n.getLocale().getCountry();
         Logger.log("LocaleManager", "Locale set to: " + locale.getLanguage() + JavaConstant.Dynamic.DEFAULT_NAME + locale.getCountry());
         Logger.log("LocaleManager", "Real locale set to: " + str + " " + this.i18n.get("NAME_OF_THE_LANGUAGE"));
@@ -241,7 +241,7 @@ public class LocaleManager extends Manager.ManagerAdapter {
         while (it.hasNext()) {
             Locale next = it.next();
             String[] split = next.alias.split(JavaConstant.Dynamic.DEFAULT_NAME);
-            I18NBundle createBundle = I18NBundle.createBundle(Gdx.files.local("i18n/MainBundle"), new java.util.Locale(split[0], split[1]));
+            I18NBundle createBundle = I18NBundle.createBundle(Gdx.files.external("i18n/MainBundle"), new java.util.Locale(split[0], split[1]));
             try {
                 FileInputStream fileInputStream = new FileInputStream(new File("i18n/MainBundle.properties"));
                 Properties properties = new Properties();
@@ -331,7 +331,7 @@ public class LocaleManager extends Manager.ManagerAdapter {
                                     str = "i18n/MainBundle_" + string + ".properties";
                                 }
                                 synchronized (LocaleManager.this.f9887d) {
-                                    Gdx.files.local(str).writeString(string2, false, "UTF-8");
+                                    Gdx.files.external(str).writeString(string2, false, "UTF-8");
                                     Logger.log("LocaleManager", "updated translations for " + string);
                                     z2 = true;
                                 }
@@ -361,7 +361,7 @@ public class LocaleManager extends Manager.ManagerAdapter {
                 String str;
                 String locale = LocaleManager.this.getLocale();
                 Logger.log("LocaleManager", "locale: " + locale);
-                String md5Hash = StringFormatter.md5Hash(Gdx.files.local("i18n/MainBundle.properties").readString("UTF-8"));
+                String md5Hash = StringFormatter.md5Hash(Gdx.files.external("i18n/MainBundle.properties").readString("UTF-8"));
                 if (!locale.equals("en_US")) {
                     Files files = Gdx.files;
                     str = StringFormatter.md5Hash(files.local("i18n/MainBundle_" + locale + ".properties").readString("UTF-8"));

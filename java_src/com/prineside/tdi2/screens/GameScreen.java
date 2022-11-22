@@ -1112,7 +1112,7 @@ public class GameScreen extends Screen {
                     } else {
                         str = replayRecord.f10052id;
                     }
-                    Gdx.files.local("desync-report-" + str + ".txt").writeString(stringBuilder.toString(), false, "UTF-8");
+                    Gdx.files.external("desync-report-" + str + ".txt").writeString(stringBuilder.toString(), false, "UTF-8");
                     this.validationS.dispose();
                     this.validationS = null;
                     if (!Config.isHeadless()) {

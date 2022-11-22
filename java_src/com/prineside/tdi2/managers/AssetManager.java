@@ -286,7 +286,7 @@ public class AssetManager extends Manager.ManagerAdapter {
     }
 
     public static void clearCacheDir() {
-        FileHandle local = Gdx.files.local("cache");
+        FileHandle local = Gdx.files.external("cache");
         if (local.isDirectory()) {
             local.deleteDirectory();
             Logger.log("AssetManager", "cache dir removed");
@@ -294,7 +294,7 @@ public class AssetManager extends Manager.ManagerAdapter {
     }
 
     public static FileHandle localOrInternalFile(String str) {
-        FileHandle local = Gdx.files.local(str);
+        FileHandle local = Gdx.files.external(str);
         if (local.exists()) {
             return local;
         }
@@ -544,8 +544,8 @@ public class AssetManager extends Manager.ManagerAdapter {
             long j = 0;
             if (!z) {
                 try {
-                    if (Gdx.files.local(str2).exists()) {
-                        j = Gdx.files.local(str2).file().lastModified();
+                    if (Gdx.files.external(str2).exists()) {
+                        j = Gdx.files.external(str2).file().lastModified();
                     }
                 } catch (Exception unused) {
                 }
@@ -555,11 +555,11 @@ public class AssetManager extends Manager.ManagerAdapter {
                     @Override // java.lang.Runnable
                     public void run() {
                         try {
-                            AssetManager.this.m21714f(webTextureRegion2, Gdx.files.local(str2).readBytes());
+                            AssetManager.this.m21714f(webTextureRegion2, Gdx.files.external(str2).readBytes());
                         } catch (Exception e) {
                             Logger.error("AssetManager", "failed to load web texture from local cache - " + str2 + ", " + str + ", re-downloading", e);
                             try {
-                                Gdx.files.local(str2).delete();
+                                Gdx.files.external(str2).delete();
                                 AssetManager.this.loadWebTexture(str);
                             } catch (Exception unused2) {
                                 Logger.error("AssetManager", "failed to delete local cache file - " + str2, e);
@@ -588,7 +588,7 @@ public class AssetManager extends Manager.ManagerAdapter {
                         byte[] result = httpResponse.getResult();
                         try {
                             AssetManager.this.m21714f(webTextureRegion2, result);
-                            Gdx.files.local(str2).writeBytes(result, false);
+                            Gdx.files.external(str2).writeBytes(result, false);
                         } catch (Exception e) {
                             Logger.error("AssetManager", "failed to create web texture from " + str, e);
                         }

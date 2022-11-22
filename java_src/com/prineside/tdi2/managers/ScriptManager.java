@@ -205,8 +205,8 @@ public class ScriptManager extends Manager.ManagerAdapter {
                 }
                 this.f10089a.set("managers", new ReadOnlyLuaTable(luaTable2));
                 Array array2 = new Array(true, 1, FileHandle.class);
-                if (Gdx.files.local("scripts").exists()) {
-                    for (FileHandle fileHandle : Gdx.files.local("scripts").list()) {
+                if (Gdx.files.external("scripts").exists()) {
+                    for (FileHandle fileHandle : Gdx.files.external("scripts").list()) {
                         if (!fileHandle.isDirectory()) {
                             array2.add(fileHandle);
                         }

@@ -249,7 +249,7 @@ public class ModelView extends Actor implements Disposable {
                 byte[] frameBufferPixels = ScreenUtils.getFrameBufferPixels(0, 0, this.f12617F.getWidth(), this.f12617F.getHeight(), true);
                 Pixmap pixmap = new Pixmap(this.f12617F.getWidth(), this.f12617F.getHeight(), Pixmap.Format.RGBA8888);
                 BufferUtils.copy(frameBufferPixels, 0, (Buffer) pixmap.getPixels(), frameBufferPixels.length);
-                PixmapIO.writePNG(Gdx.files.local(this.f12623L), pixmap);
+                PixmapIO.writePNG(Gdx.files.external(this.f12623L), pixmap);
                 pixmap.dispose();
                 this.f12622K = false;
             }

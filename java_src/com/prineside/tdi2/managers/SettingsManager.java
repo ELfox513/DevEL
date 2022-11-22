@@ -139,7 +139,7 @@ public class SettingsManager extends Manager.ManagerAdapter {
         /* renamed from: b */
         public /* synthetic */ void m21481b(String str) {
             try {
-                Gdx.files.local("cache/dynamic-settings.json").writeString(str, false, "UTF-8");
+                Gdx.files.external("cache/dynamic-settings.json").writeString(str, false, "UTF-8");
             } catch (Exception e) {
                 Logger.error("SettingsManager", "failed to cache dynamic settings locally", e);
             }
@@ -842,7 +842,7 @@ public class SettingsManager extends Manager.ManagerAdapter {
 
     /* renamed from: g */
     public final boolean m21485g() {
-        FileHandle local = Gdx.files.local("cache/dynamic-settings.json");
+        FileHandle local = Gdx.files.external("cache/dynamic-settings.json");
         if (local.exists()) {
             Logger.log("SettingsManager", "loading local dynamic settings (" + Game.getTimestampMillis() + ", " + local.lastModified() + ")");
             try {

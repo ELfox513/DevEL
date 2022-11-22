@@ -746,7 +746,7 @@ public abstract class BaseLib extends TwoArgFunction implements ResourceFinder {
             Logger.error("BaseLib", "filename should not contain ../");
             return null;
         }
-        FileHandle local = Gdx.files.local(str);
+        FileHandle local = Gdx.files.external(str);
         if (!local.exists()) {
             local = Gdx.files.external(str);
         }

@@ -83,7 +83,7 @@ public class LoadingScreen extends Screen {
         public void done() {
             if (!LoadingScreen.this.f10832m) {
                 try {
-                    Gdx.files.local("cache/enable-fast-loading-B184.txt").writeString("This file was created after a successful, careful initialization of the game.\nIt seems your device had not caught fire so now we can use more extreme loading process.", false);
+                    Gdx.files.external("cache/enable-fast-loading-B184.txt").writeString("This file was created after a successful, careful initialization of the game.\nIt seems your device had not caught fire so now we can use more extreme loading process.", false);
                 } catch (Exception unused) {
                 }
                 Game.f8589i.screenManager.goToMainMenu();
@@ -140,7 +140,7 @@ public class LoadingScreen extends Screen {
         this.f10827h.add((Table) this.f10829j).width(384.0f).padTop(8.0f).padBottom(120.0f).row();
         this.f10827h.add((Table) new Image(this.f10822c)).size(128.0f).padBottom(32.0f).row();
         StringBuilder sb = new StringBuilder();
-        sb.append("Infinitode 2 DevEL Unofficial Patch\nv.R.1.8.7 (b 184) [01]\n");
+        sb.append("Infinitode 2 DevEL Unofficial Patch\nv.R.1.8.7 (b 184) [02]\n");
         sb.append((Runtime.getRuntime().maxMemory() / 1024) / 1024);
         sb.append("Mb / ");
         sb.append(Config.getMaxTextureSize() / 1024);
@@ -223,7 +223,7 @@ public class LoadingScreen extends Screen {
 
     public LoadingScreen(GameSyncLoader gameSyncLoader) {
         float f;
-        boolean exists = Gdx.files.local("cache/enable-fast-loading-B184.txt").exists();
+        boolean exists = Gdx.files.external("cache/enable-fast-loading-B184.txt").exists();
         this.f10832m = exists;
         this.f10820a = gameSyncLoader;
         if (!exists) {
@@ -236,7 +236,7 @@ public class LoadingScreen extends Screen {
         pixmap.fill();
         this.f10824e = new Texture(pixmap);
         pixmap.dispose();
-        Texture texture = new Texture(Gdx.files.external("res/loading-brand.png"), format, false);
+        Texture texture = new Texture(Gdx.files.internal("loading-brand.png"), format, false);
         this.f10822c = texture;
         Texture.TextureFilter textureFilter = Texture.TextureFilter.Linear;
         texture.setFilter(textureFilter, textureFilter);
@@ -251,7 +251,7 @@ public class LoadingScreen extends Screen {
             f = 2.0f;
         }
         this.f10830k = f;
-        Texture texture2 = new Texture(Gdx.files.external("res/loading-logo.png"), format, false);
+        Texture texture2 = new Texture(Gdx.files.internal("loading-logo.png"), format, false);
         this.f10821b = texture2;
         texture2.setFilter(textureFilter, textureFilter);
         ScreenViewport screenViewport = new ScreenViewport();

@@ -55,11 +55,11 @@ public class AboutScreen extends Screen {
         labelStyle2.fontColor = MaterialColor.AMBER.P500;
         table.add((Table) new Image(Game.f8589i.assetManager.getDrawable("infinitode-2-logo"))).size(128.0f).padBottom(20.0f);
         table.row();
-        table.add((Table) new Label(Game.f8589i.localeManager.i18n.get("game_name"), labelStyle));
+        table.add((Table) new Label("Infinitode 2 DevEL Unofficial patch by ELfox", labelStyle));
         table.row();
         table.add((Table) new Label(Game.f8589i.localeManager.i18n.get("about_version"), labelStyle2)).height(48.0f).padTop(30.0f);
         table.row();
-        table.add((Table) new Label("R.1.8.7 (build 184)", labelStyle)).height(48.0f);
+        table.add((Table) new Label("R.1.8.7 (build 184) [02]", labelStyle)).height(48.0f);
         table.row();
         Table table2 = new Table();
         table2.add((Table) new RectButton(Game.f8589i.localeManager.i18n.get("get_support"), Game.f8589i.assetManager.getLabelStyle(30), new Runnable() { // from class: com.prineside.tdi2.screens.AboutScreen.3

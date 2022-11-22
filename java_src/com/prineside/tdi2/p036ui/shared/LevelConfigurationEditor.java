@@ -986,7 +986,7 @@ public class LevelConfigurationEditor {
         Application.ApplicationType type = Gdx.app.getType();
         Application.ApplicationType applicationType = Application.ApplicationType.Desktop;
         boolean z = (type == applicationType || Gdx.app.getType() == Application.ApplicationType.HeadlessDesktop) ? false : false;
-        boolean exists = Gdx.files.local("levels/" + this.f14556b.name + ".json").exists();
+        boolean exists = Gdx.files.external("levels/" + this.f14556b.name + ".json").exists();
         boolean contains = Game.f8589i.basicLevelManager.defaultLevelNames.contains(this.f14556b.name, false);
         if (contains) {
             table.add((Table) new Label("Default", Game.f8589i.assetManager.getLabelStyle(21))).padRight(10.0f);
@@ -1016,7 +1016,7 @@ public class LevelConfigurationEditor {
         }
         Gdx.files.external("levels/maps/" + this.f14556b.name + ".json").exists();
         boolean z2 = (Gdx.app.getType() == applicationType || Gdx.app.getType() == Application.ApplicationType.HeadlessDesktop) ? false : false;
-        boolean exists2 = Gdx.files.local("levels/maps/" + this.f14556b.name + ".json").exists();
+        boolean exists2 = Gdx.files.external("levels/maps/" + this.f14556b.name + ".json").exists();
         if (contains && z2 && exists2) {
             table.add((Table) new RectButton("Reset map", Game.f8589i.assetManager.getLabelStyle(24), new Runnable() { // from class: com.prineside.tdi2.ui.shared.c0
                 @Override // java.lang.Runnable

@@ -6,16 +6,18 @@ DevEL is a unofficial patch for [Infinitode 2](https://infinitode.prineside.com/
 
 * ~~Move internal path to external path~~
 * ~~Lock normal mode~~
-* Move local path to external path
-* Remove the output of some ad loading errors
+* ~~Move local path to external path~~
+* ~~Remove logging of some ad loading errors~~
 
 *These features below will be implemented depending on how many people will use this patch*
-* In-game FAQ and DevEL news
+* In-game FAQ and DevEL news 
 * Additional screen if the patch is launched without resources
 * StateEditor
 * CameraTools
 * Slightly modified loading screen
 * MultiCPU
+* Remove ugly consent form
+* log.txt on external path
 
 ## How to use
 
@@ -34,8 +36,12 @@ You can use the modding mode just like on PC according to the [game's official m
 
 ### Using [APKLab](https://marketplace.visualstudio.com/items?itemName=Surendrajat.apklab) in [Visual Studio Code](https://code.visualstudio.com/) (recommended)
 
-  // TODO
+1. Right click on the <code>apktool.iml</code> file -> <code>APKLab: Rebuild the APK</code>
+2. Done. Your apk file in <code>dist</code> folder
 
-### Using [Apktool](https://ibotpeaches.github.io/Apktool/) and [Uber Apk Signer](https://github.com/patrickfav/uber-apk-signer)
+### Using [Apktool](https://ibotpeaches.github.io/Apktool/) (2.6.1) and [Uber Apk Signer](https://github.com/patrickfav/uber-apk-signer) (1.2.1)
 
-  // TODO
+**This guide is for Windows. In other OS, the steps of the instruction may differ**
+1. Command for console: <code>java -jar C:\Your\Path\To\apktool_2.6.1.jar b c:\Your\Path\To\Clonned\DevEL-v1.8.7 --use-aapt2</code>
+2. Command for console: <code>java -jar C:\Your\Path\To\uber-apk-signer-1.2.1.jar -a "c:\Your\Path\To\Clonned\DevEL-v1.8.7\dist\Infinitode 2 DevEL-v1.8.7-02.apk" --allowResign --overwrite
+3. Done. Your apk file in <code>dist</code> folder
