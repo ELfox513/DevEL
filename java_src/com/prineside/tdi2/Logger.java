@@ -449,7 +449,7 @@ public class Logger {
             }
         }
         try {
-            if (Config.isHeadless() || Gdx.app.getType() == Application.ApplicationType.Desktop) {
+            if (Config.isHeadless()) {
                 PrintWriter printWriter = new PrintWriter(Gdx.files.external("exceptions.log").write(true));
                 printWriter.append("Exception in thread ").append((CharSequence) thread.getName()).append(":\n");
                 th.printStackTrace(printWriter);

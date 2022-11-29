@@ -125,14 +125,7 @@
 
     iget-boolean p1, p0, Lcom/prineside/tdi2/screens/LoadingScreen;->m:Z
 
-    if-eqz p1, :cond_2
-
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    goto :goto_0
-
-    :cond_2
-    const/high16 p1, 0x40000000    # 2.0f
+    const/high16 p1, 0x3F000000
 
     :goto_0
     iput p1, p0, Lcom/prineside/tdi2/screens/LoadingScreen;->k:F
@@ -355,7 +348,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "Infinitode 2 DevEL Unofficial Patch\nv.R.1.8.7 (b 184) [02]\n"
+    const-string v6, "Infinitode 2 DevEL Unofficial Patch\nv.R.1.8.7 (b 184) [03]\n"
 
     invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -540,161 +533,6 @@
 
     invoke-virtual {v0, v1}, Lcom/badlogic/gdx/scenes/scene2d/Group;->addActor(Lcom/badlogic/gdx/scenes/scene2d/Actor;)V
 
-    iget-object v0, p0, Lcom/prineside/tdi2/screens/LoadingScreen;->d:Lcom/badlogic/gdx/graphics/Texture;
-
-    if-eqz v0, :cond_2
-
-    iget v0, p0, Lcom/prineside/tdi2/screens/LoadingScreen;->k:F
-
-    const/high16 v1, 0x3f000000    # 0.5f
-
-    cmpl-float v0, v0, v1
-
-    if-lez v0, :cond_2
-
-    new-instance v0, Lcom/badlogic/gdx/scenes/scene2d/ui/Image;
-
-    iget-object v3, p0, Lcom/prineside/tdi2/screens/LoadingScreen;->e:Lcom/badlogic/gdx/graphics/Texture;
-
-    invoke-direct {v0, v3}, Lcom/badlogic/gdx/scenes/scene2d/ui/Image;-><init>(Lcom/badlogic/gdx/graphics/Texture;)V
-
-    iget-object v3, p0, Lcom/prineside/tdi2/screens/LoadingScreen;->l:Lcom/badlogic/gdx/graphics/Color;
-
-    invoke-virtual {v0, v3}, Lcom/badlogic/gdx/scenes/scene2d/Actor;->setColor(Lcom/badlogic/gdx/graphics/Color;)V
-
-    iget-object v3, p0, Lcom/prineside/tdi2/screens/LoadingScreen;->f:Lcom/badlogic/gdx/utils/viewport/ScreenViewport;
-
-    invoke-virtual {v3}, Lcom/badlogic/gdx/utils/viewport/Viewport;->getWorldWidth()F
-
-    move-result v3
-
-    iget-object v4, p0, Lcom/prineside/tdi2/screens/LoadingScreen;->f:Lcom/badlogic/gdx/utils/viewport/ScreenViewport;
-
-    invoke-virtual {v4}, Lcom/badlogic/gdx/utils/viewport/Viewport;->getWorldHeight()F
-
-    move-result v4
-
-    invoke-virtual {v0, v3, v4}, Lcom/badlogic/gdx/scenes/scene2d/Actor;->setSize(FF)V
-
-    iget-object v3, p0, Lcom/prineside/tdi2/screens/LoadingScreen;->g:Lcom/badlogic/gdx/scenes/scene2d/Stage;
-
-    invoke-virtual {v3, v0}, Lcom/badlogic/gdx/scenes/scene2d/Stage;->addActor(Lcom/badlogic/gdx/scenes/scene2d/Actor;)V
-
-    iget v3, p0, Lcom/prineside/tdi2/screens/LoadingScreen;->k:F
-
-    const v4, 0x3e4ccccd    # 0.2f
-
-    sub-float/2addr v3, v4
-
-    invoke-static {v3, v2}, Ljava/lang/StrictMath;->max(FF)F
-
-    move-result v3
-
-    invoke-static {v3}, Lcom/badlogic/gdx/scenes/scene2d/actions/Actions;->delay(F)Lcom/badlogic/gdx/scenes/scene2d/actions/DelayAction;
-
-    move-result-object v3
-
-    invoke-static {v4}, Lcom/badlogic/gdx/scenes/scene2d/actions/Actions;->fadeOut(F)Lcom/badlogic/gdx/scenes/scene2d/actions/AlphaAction;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Lcom/badlogic/gdx/scenes/scene2d/actions/Actions;->sequence(Lcom/badlogic/gdx/scenes/scene2d/Action;Lcom/badlogic/gdx/scenes/scene2d/Action;)Lcom/badlogic/gdx/scenes/scene2d/actions/SequenceAction;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Lcom/badlogic/gdx/scenes/scene2d/Actor;->addAction(Lcom/badlogic/gdx/scenes/scene2d/Action;)V
-
-    new-instance v0, Lcom/badlogic/gdx/scenes/scene2d/ui/Image;
-
-    iget-object v3, p0, Lcom/prineside/tdi2/screens/LoadingScreen;->d:Lcom/badlogic/gdx/graphics/Texture;
-
-    invoke-direct {v0, v3}, Lcom/badlogic/gdx/scenes/scene2d/ui/Image;-><init>(Lcom/badlogic/gdx/graphics/Texture;)V
-
-    iget-object v3, p0, Lcom/prineside/tdi2/screens/LoadingScreen;->f:Lcom/badlogic/gdx/utils/viewport/ScreenViewport;
-
-    invoke-virtual {v3}, Lcom/badlogic/gdx/utils/viewport/Viewport;->getWorldWidth()F
-
-    move-result v3
-
-    mul-float v3, v3, v1
-
-    iget-object v4, p0, Lcom/prineside/tdi2/screens/LoadingScreen;->d:Lcom/badlogic/gdx/graphics/Texture;
-
-    invoke-virtual {v4}, Lcom/badlogic/gdx/graphics/Texture;->getWidth()I
-
-    move-result v4
-
-    int-to-float v4, v4
-
-    mul-float v4, v4, v1
-
-    sub-float/2addr v3, v4
-
-    iget-object v4, p0, Lcom/prineside/tdi2/screens/LoadingScreen;->f:Lcom/badlogic/gdx/utils/viewport/ScreenViewport;
-
-    invoke-virtual {v4}, Lcom/badlogic/gdx/utils/viewport/Viewport;->getWorldHeight()F
-
-    move-result v4
-
-    mul-float v4, v4, v1
-
-    iget-object v5, p0, Lcom/prineside/tdi2/screens/LoadingScreen;->d:Lcom/badlogic/gdx/graphics/Texture;
-
-    invoke-virtual {v5}, Lcom/badlogic/gdx/graphics/Texture;->getHeight()I
-
-    move-result v5
-
-    int-to-float v5, v5
-
-    mul-float v5, v5, v1
-
-    sub-float/2addr v4, v5
-
-    invoke-virtual {v0, v3, v4}, Lcom/badlogic/gdx/scenes/scene2d/Actor;->setPosition(FF)V
-
-    iget-object v1, p0, Lcom/prineside/tdi2/screens/LoadingScreen;->g:Lcom/badlogic/gdx/scenes/scene2d/Stage;
-
-    invoke-virtual {v1, v0}, Lcom/badlogic/gdx/scenes/scene2d/Stage;->addActor(Lcom/badlogic/gdx/scenes/scene2d/Actor;)V
-
-    invoke-static {v2}, Lcom/badlogic/gdx/scenes/scene2d/actions/Actions;->alpha(F)Lcom/badlogic/gdx/scenes/scene2d/actions/AlphaAction;
-
-    move-result-object v1
-
-    const v3, 0x3e19999a    # 0.15f
-
-    invoke-static {v3}, Lcom/badlogic/gdx/scenes/scene2d/actions/Actions;->fadeIn(F)Lcom/badlogic/gdx/scenes/scene2d/actions/AlphaAction;
-
-    move-result-object v4
-
-    iget v5, p0, Lcom/prineside/tdi2/screens/LoadingScreen;->k:F
-
-    const v6, 0x3e99999a    # 0.3f
-
-    sub-float/2addr v5, v6
-
-    invoke-static {v5, v2}, Ljava/lang/StrictMath;->max(FF)F
-
-    move-result v2
-
-    invoke-static {v2}, Lcom/badlogic/gdx/scenes/scene2d/actions/Actions;->delay(F)Lcom/badlogic/gdx/scenes/scene2d/actions/DelayAction;
-
-    move-result-object v2
-
-    invoke-static {v4, v2}, Lcom/badlogic/gdx/scenes/scene2d/actions/Actions;->parallel(Lcom/badlogic/gdx/scenes/scene2d/Action;Lcom/badlogic/gdx/scenes/scene2d/Action;)Lcom/badlogic/gdx/scenes/scene2d/actions/ParallelAction;
-
-    move-result-object v2
-
-    invoke-static {v3}, Lcom/badlogic/gdx/scenes/scene2d/actions/Actions;->fadeOut(F)Lcom/badlogic/gdx/scenes/scene2d/actions/AlphaAction;
-
-    move-result-object v3
-
-    invoke-static {v1, v2, v3}, Lcom/badlogic/gdx/scenes/scene2d/actions/Actions;->sequence(Lcom/badlogic/gdx/scenes/scene2d/Action;Lcom/badlogic/gdx/scenes/scene2d/Action;Lcom/badlogic/gdx/scenes/scene2d/Action;)Lcom/badlogic/gdx/scenes/scene2d/actions/SequenceAction;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/badlogic/gdx/scenes/scene2d/Actor;->addAction(Lcom/badlogic/gdx/scenes/scene2d/Action;)V
-
-    :cond_2
     return-void
 .end method
 

@@ -140,7 +140,7 @@ public class LoadingScreen extends Screen {
         this.f10827h.add((Table) this.f10829j).width(384.0f).padTop(8.0f).padBottom(120.0f).row();
         this.f10827h.add((Table) new Image(this.f10822c)).size(128.0f).padBottom(32.0f).row();
         StringBuilder sb = new StringBuilder();
-        sb.append("Infinitode 2 DevEL Unofficial Patch\nv.R.1.8.7 (b 184) [02]\n");
+        sb.append("Infinitode 2 DevEL Unofficial Patch\nv.R.1.8.7 (b 184) [03]\n");
         sb.append((Runtime.getRuntime().maxMemory() / 1024) / 1024);
         sb.append("Mb / ");
         sb.append(Config.getMaxTextureSize() / 1024);
@@ -169,17 +169,6 @@ public class LoadingScreen extends Screen {
         image2.setColor(new Color(0.56f, 0.56f, 0.56f, 1.0f));
         this.f10828i.setSize(0.0f, 8.0f);
         group.addActor(this.f10828i);
-        if (this.f10823d != null && this.f10830k > 0.5f) {
-            Image image3 = new Image(this.f10824e);
-            image3.setColor(this.f10831l);
-            image3.setSize(this.f10825f.getWorldWidth(), this.f10825f.getWorldHeight());
-            this.f10826g.addActor(image3);
-            image3.addAction(Actions.sequence(Actions.delay(StrictMath.max(this.f10830k - 0.2f, 0.0f)), Actions.fadeOut(0.2f)));
-            Image image4 = new Image(this.f10823d);
-            image4.setPosition((this.f10825f.getWorldWidth() * 0.5f) - (this.f10823d.getWidth() * 0.5f), (this.f10825f.getWorldHeight() * 0.5f) - (this.f10823d.getHeight() * 0.5f));
-            this.f10826g.addActor(image4);
-            image4.addAction(Actions.sequence(Actions.alpha(0.0f), Actions.parallel(Actions.fadeIn(0.15f), Actions.delay(StrictMath.max(this.f10830k - 0.3f, 0.0f))), Actions.fadeOut(0.15f)));
-        }
     }
 
     @Override // com.prineside.tdi2.Screen, com.badlogic.gdx.Screen
@@ -222,7 +211,6 @@ public class LoadingScreen extends Screen {
     }
 
     public LoadingScreen(GameSyncLoader gameSyncLoader) {
-        float f;
         boolean exists = Gdx.files.external("cache/enable-fast-loading-B184.txt").exists();
         this.f10832m = exists;
         this.f10820a = gameSyncLoader;
@@ -245,12 +233,7 @@ public class LoadingScreen extends Screen {
             this.f10823d = this.f10822c;
         }
         this.f10823d.setFilter(textureFilter, textureFilter);
-        if (this.f10832m) {
-            f = 1.0f;
-        } else {
-            f = 2.0f;
-        }
-        this.f10830k = f;
+        this.f10830k = 0.5f;
         Texture texture2 = new Texture(Gdx.files.internal("loading-logo.png"), format, false);
         this.f10821b = texture2;
         texture2.setFilter(textureFilter, textureFilter);

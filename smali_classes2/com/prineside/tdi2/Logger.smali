@@ -1598,19 +1598,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_5
 
-    sget-object v0, Lcom/badlogic/gdx/Gdx;->app:Lcom/badlogic/gdx/Application;
-
-    invoke-interface {v0}, Lcom/badlogic/gdx/Application;->getType()Lcom/badlogic/gdx/Application$ApplicationType;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/badlogic/gdx/Application$ApplicationType;->Desktop:Lcom/badlogic/gdx/Application$ApplicationType;
-
-    if-ne v0, v1, :cond_5
-
-    :cond_3
     sget-object v0, Lcom/badlogic/gdx/Gdx;->files:Lcom/badlogic/gdx/Files;
 
     const-string v1, "exceptions.log"

@@ -10,14 +10,12 @@ DevEL is a unofficial patch for [Infinitode 2](https://infinitode.prineside.com/
 * ~~Remove logging of some ad loading errors~~
 
 *These features below will be implemented depending on how many people will use this patch*
-* In-game FAQ and DevEL news 
-* Additional screen if the patch is launched without resources
-* StateEditor
-* CameraTools
-* Slightly modified loading screen
-* MultiCPU
+* ~~MultiCPU~~
+* ~~Logs on external path~~ (only exceptions.log)
+* ~~Remove spash screen with brand logo~~
 * Remove ugly consent form
-* log.txt on external path
+* Slightly modified loading screen
+* Additional screen if the patch is launched without resources
 
 ## How to use
 
