@@ -11,9 +11,9 @@ DevEL is a unofficial patch for [Infinitode 2](https://infinitode.prineside.com/
 
 *These features below will be implemented depending on how many people will use this patch*
 * ~~MultiCPU~~
-* ~~Logs on external path~~ (only exceptions.log)
+* ~~Logs on external path~~
 * ~~Remove spash screen with brand logo~~
-* Remove ugly consent form
+* ~~Remove ugly consent form~~
 * Slightly modified loading screen
 * Additional screen if the patch is launched without resources
 

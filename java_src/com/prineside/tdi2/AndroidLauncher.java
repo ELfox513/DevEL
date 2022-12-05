@@ -1685,7 +1685,7 @@ public class AndroidLauncher extends AndroidApplication {
     }
 
     public void loadThatUglyConsentForm() {
-        Logger.log("AndroidLauncher", "loadThatUglyConsentForm called");
+        Logger.log("AndroidLauncher", "loadThatUglyConsentForm NOT called, hehe");
     }
 
     /* renamed from: n0 */

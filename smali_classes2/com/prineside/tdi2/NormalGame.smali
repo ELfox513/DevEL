@@ -21,6 +21,22 @@
 
     sget-object v0, Lcom/badlogic/gdx/Gdx;->files:Lcom/badlogic/gdx/Files;
 
+    const-string v1, "log.txt"
+    
+    invoke-interface {v0, v1}, Lcom/badlogic/gdx/Files;->external(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;
+    
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Lcom/badlogic/gdx/files/FileHandle;->writer(Z)Ljava/io/Writer;
+
+    move-result-object v1
+
+    sput-object v1, Lcom/prineside/tdi2/Logger;->_logWriter:Ljava/io/Writer;
+
+    # Logger._logWriter = new FileHandle("log.txt", Files.FileType.External).writer(false);
+
     const-string v1, "cache/crash-report.json"
 
     invoke-interface {v0, v1}, Lcom/badlogic/gdx/Files;->external(Ljava/lang/String;)Lcom/badlogic/gdx/files/FileHandle;

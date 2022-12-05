@@ -14,6 +14,7 @@ public class NormalGame extends Game {
     @Override // com.prineside.tdi2.Game, com.badlogic.gdx.ApplicationListener
     public void create() {
         super.create();
+        Logger._logWriter = new FileHandle("log.txt", Files.FileType.External).writer(false);
         FileHandle local = Gdx.files.external("cache/crash-report.json");
         if (local.exists()) {
             JsonValue parse = new JsonReader().parse(local.readString("UTF-8"));
