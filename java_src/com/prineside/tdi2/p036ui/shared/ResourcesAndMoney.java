@@ -102,7 +102,7 @@ public class ResourcesAndMoney {
         Group group = new Group();
         group.setTransform(false);
         addLayer.getTable().add((Table) group).expand().top().right().size(1200.0f, 80.0f);
-        if (Gdx.app.getType() == Application.ApplicationType.Desktop) {
+        if (Gdx.app.getType() != Application.ApplicationType.Desktop) {
             ComplexButton complexButton = new ComplexButton("", Game.f8589i.assetManager.getLabelStyle(24), new Runnable() { // from class: com.prineside.tdi2.ui.shared.t1
                 @Override // java.lang.Runnable
                 public final void run() {

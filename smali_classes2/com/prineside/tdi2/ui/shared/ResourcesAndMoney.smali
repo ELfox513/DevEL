@@ -141,7 +141,7 @@
 
     const/high16 v10, 0x42b00000    # 88.0f
 
-    if-ne v5, v8, :cond_0
+    if-eq v5, v8, :cond_0
 
     new-instance v5, Lcom/prineside/tdi2/ui/actors/ComplexButton;
 
