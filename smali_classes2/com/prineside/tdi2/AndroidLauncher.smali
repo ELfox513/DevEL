@@ -1643,30 +1643,9 @@
 
     const-string v0, "AndroidLauncher"
 
-    const-string v1, "loadThatUglyConsentForm called"
+    const-string v1, "loadThatUglyConsentForm NOT called, hehe"
 
     invoke-static {v0, v1}, Lcom/prineside/tdi2/Logger;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcom/prineside/tdi2/AndroidLauncher;->D:Lk5/c;
-
-    if-nez v1, :cond_0
-
-    const-string v1, "loadThatUglyConsentForm - consentInformation is null"
-
-    invoke-static {v0, v1}, Lcom/prineside/tdi2/Logger;->error(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    new-instance v0, Lcom/prineside/tdi2/l;
-
-    invoke-direct {v0, p0}, Lcom/prineside/tdi2/l;-><init>(Lcom/prineside/tdi2/AndroidLauncher;)V
-
-    new-instance v1, Lcom/prineside/tdi2/m;
-
-    invoke-direct {v1}, Lcom/prineside/tdi2/m;-><init>()V
-
-    invoke-static {p0, v0, v1}, Lk5/f;->b(Landroid/content/Context;Lk5/f$b;Lk5/f$a;)V
 
     return-void
 .end method

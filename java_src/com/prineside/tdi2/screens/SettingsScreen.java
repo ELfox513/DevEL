@@ -297,7 +297,7 @@ public class SettingsScreen extends Screen {
         }
         Application.ApplicationType type = Gdx.app.getType();
         Application.ApplicationType applicationType = Application.ApplicationType.Desktop;
-        if (type != applicationType) {
+        if (type == applicationType) {
             LocaleButton localeButton2 = new LocaleButton(Game.f8589i.assetManager.replaceRegionAliasesWithChars("简体中文<@icon-link-out>").toString()) { // from class: com.prineside.tdi2.screens.SettingsScreen.3
                 @Override // com.prineside.tdi2.screens.SettingsScreen.LocaleButton
                 public void onClick() {

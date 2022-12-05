@@ -123,7 +123,7 @@ public class LanguageSelectScreen extends Screen {
                 table.row();
             }
         }
-        if (Gdx.app.getType() != Application.ApplicationType.Desktop) {
+        if (Gdx.app.getType() == Application.ApplicationType.Desktop) {
             final Label label2 = new Label(Game.f8589i.assetManager.replaceRegionAliasesWithChars("简体中文<@icon-link-out>").toString(), labelStyle);
             label2.setAlignment(1);
             table.add((Table) label2).size(460.0f, 120.0f);

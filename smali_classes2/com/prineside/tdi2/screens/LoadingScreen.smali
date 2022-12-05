@@ -348,7 +348,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "Infinitode 2 DevEL Unofficial Patch\nv.R.1.8.7 (b 184) [03]\n"
+    const-string v6, "Infinitode 2 DevEL Unofficial Patch\nv.R.1.8.7 (b 184) [04]\n"
 
     invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

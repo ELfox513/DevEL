@@ -520,7 +520,7 @@
 
     sget-object v10, Lcom/badlogic/gdx/Application$ApplicationType;->Desktop:Lcom/badlogic/gdx/Application$ApplicationType;
 
-    if-eq v6, v10, :cond_2
+    if-ne v6, v10, :cond_2
 
     new-instance v6, Lcom/prineside/tdi2/screens/SettingsScreen$3;
 

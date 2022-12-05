@@ -1686,23 +1686,6 @@ public class AndroidLauncher extends AndroidApplication {
 
     public void loadThatUglyConsentForm() {
         Logger.log("AndroidLauncher", "loadThatUglyConsentForm called");
-        if (this.f8420D == null) {
-            Logger.error("AndroidLauncher", "loadThatUglyConsentForm - consentInformation is null");
-        } else {
-            C4472f.m16328b(this, new C4472f.InterfaceC4474b() { // from class: com.prineside.tdi2.l
-                @Override // p106k5.C4472f.InterfaceC4474b
-                /* renamed from: b */
-                public final void mo1388b(InterfaceC4464b interfaceC4464b) {
-                    AndroidLauncher.this.m22178d0(interfaceC4464b);
-                }
-            }, new C4472f.InterfaceC4473a() { // from class: com.prineside.tdi2.m
-                @Override // p106k5.C4472f.InterfaceC4473a
-                /* renamed from: a */
-                public final void mo1389a(C4471e c4471e) {
-                    AndroidLauncher.m22176e0(c4471e);
-                }
-            });
-        }
     }
 
     /* renamed from: n0 */

@@ -479,7 +479,7 @@
 
     sget-object v7, Lcom/badlogic/gdx/Application$ApplicationType;->Desktop:Lcom/badlogic/gdx/Application$ApplicationType;
 
-    if-eq v5, v7, :cond_4
+    if-ne v5, v7, :cond_4
 
     new-instance v5, Lcom/badlogic/gdx/scenes/scene2d/ui/Label;
 

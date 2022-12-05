@@ -179,7 +179,7 @@
 
     new-instance v5, Lcom/badlogic/gdx/scenes/scene2d/ui/Label;
 
-    const-string v9, "R.1.8.7 (build 184) [03]"
+    const-string v9, "R.1.8.7 (build 184) [04]"
 
     invoke-direct {v5, v9, v2}, Lcom/badlogic/gdx/scenes/scene2d/ui/Label;-><init>(Ljava/lang/CharSequence;Lcom/badlogic/gdx/scenes/scene2d/ui/Label$LabelStyle;)V
 

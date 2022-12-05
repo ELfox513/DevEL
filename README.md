@@ -37,9 +37,9 @@ You can use the modding mode just like on PC according to the [game's official m
 1. Right click on the <code>apktool.iml</code> file -> <code>APKLab: Rebuild the APK</code>
 2. Done. Your apk file in <code>dist</code> folder
 
-### Using [Apktool](https://ibotpeaches.github.io/Apktool/) (2.6.1) and [Uber Apk Signer](https://github.com/patrickfav/uber-apk-signer) (1.2.1)
+### Using [Apktool](https://ibotpeaches.github.io/Apktool/) (2.7.0) and [Uber Apk Signer](https://github.com/patrickfav/uber-apk-signer) (1.2.1)
 
 **This guide is for Windows. In other OS, the steps of the instruction may differ**
-1. Command for console: <code>java -jar C:\Your\Path\To\apktool_2.6.1.jar b c:\Your\Path\To\Clonned\DevEL-v1.8.7 --use-aapt2</code>
-2. Command for console: <code>java -jar C:\Your\Path\To\uber-apk-signer-1.2.1.jar -a "c:\Your\Path\To\Clonned\DevEL-v1.8.7\dist\Infinitode 2 DevEL-v1.8.7-02.apk" --allowResign --overwrite</code>
+1. Command for console: <code>java -jar C:\Your\Path\To\apktool_2.7.0.jar b c:\Your\Path\To\Clonned\DevEL-v1.8.7 --use-aapt2</code>
+2. Command for console: <code>java -jar C:\Your\Path\To\uber-apk-signer-1.2.1.jar -a "c:\Your\Path\To\Clonned\DevEL-v1.8.7\dist\Infinitode 2 DevEL-v1.8.7-04.apk" --allowResign --overwrite</code>
 3. Done. Your apk file in <code>dist</code> folder
