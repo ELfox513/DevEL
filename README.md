@@ -41,9 +41,5 @@ You can use the modding mode just like on PC according to the [game's official m
 
 **This guide is for Windows. In other OS, the steps of the instruction may differ**
 1. Command for console: <code>java -jar C:\Your\Path\To\apktool_2.7.0.jar b c:\Your\Path\To\Clonned\DevEL-v1.8.7 --use-aapt2</code>
-<<<<<<< HEAD
 2. Command for console: <code>java -jar C:\Your\Path\To\uber-apk-signer-1.2.1.jar -a "c:\Your\Path\To\Clonned\DevEL-v1.8.7\dist\Infinitode 2 DevEL-v1.8.7-04.apk" --allowResign --overwrite</code>
-=======
-2. Command for console: <code>java -jar C:\Your\Path\To\uber-apk-signer-1.2.1.jar -a "c:\Your\Path\To\Clonned\DevEL-v1.8.7\dist\Infinitode 2 DevEL-v1.8.7-02.apk" --allowResign --overwrite</code>
->>>>>>> 061b19673e2249ce33db9f376ba0685ea570ca8b
 3. Done. Your apk file in <code>dist</code> folder
