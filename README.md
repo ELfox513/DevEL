@@ -1,4 +1,4 @@
-# DevEL-v1.8.7
+# DevEL v1.8.7
 
 DevEL is a unofficial patch for [Infinitode 2](https://infinitode.prineside.com/) v.1.8.7 (build 184) Android version that gives you access to modding mode and adapt it for Android
 
@@ -34,12 +34,16 @@ You can use the modding mode just like on PC according to the [game's official m
 
 ### Using [APKLab](https://marketplace.visualstudio.com/items?itemName=Surendrajat.apklab) in [Visual Studio Code](https://code.visualstudio.com/) (recommended)
 
-1. Right click on the <code>apktool.iml</code> file -> <code>APKLab: Rebuild the APK</code>
+1. Right click on the <code>apktool.yml</code> file -> <code>APKLab: Rebuild the APK</code>
 2. Done. Your apk file in <code>dist</code> folder
 
 ### Using [Apktool](https://ibotpeaches.github.io/Apktool/) (2.7.0) and [Uber Apk Signer](https://github.com/patrickfav/uber-apk-signer) (1.2.1)
 
 **This guide is for Windows. In other OS, the steps of the instruction may differ**
 1. Command for console: <code>java -jar C:\Your\Path\To\apktool_2.7.0.jar b c:\Your\Path\To\Clonned\DevEL-v1.8.7 --use-aapt2</code>
+<<<<<<< HEAD
 2. Command for console: <code>java -jar C:\Your\Path\To\uber-apk-signer-1.2.1.jar -a "c:\Your\Path\To\Clonned\DevEL-v1.8.7\dist\Infinitode 2 DevEL-v1.8.7-04.apk" --allowResign --overwrite</code>
+=======
+2. Command for console: <code>java -jar C:\Your\Path\To\uber-apk-signer-1.2.1.jar -a "c:\Your\Path\To\Clonned\DevEL-v1.8.7\dist\Infinitode 2 DevEL-v1.8.7-02.apk" --allowResign --overwrite</code>
+>>>>>>> 061b19673e2249ce33db9f376ba0685ea570ca8b
 3. Done. Your apk file in <code>dist</code> folder
