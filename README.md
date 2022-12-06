@@ -1,6 +1,6 @@
-# DevEL v1.8.7
+# DevEL
 
-DevEL is a unofficial patch for [Infinitode 2](https://infinitode.prineside.com/) v.1.8.7 (build 184) Android version that gives you access to modding mode and adapt it for Android
+DevEL is a unofficial patch for [Infinitode 2](https://infinitode.prineside.com/) Android version that gives you access to modding mode and adapt it for Android
 
 ## TODO feauters
 
@@ -27,7 +27,7 @@ You can use the modding mode just like on PC according to the [game's official m
 
 1. [Build](#how-to-build) or [download](https://github.com/ELfox513/DevEL-v1.8.7/releases) patched APK and install it
 2. Create the <code>com.prineside.tdi2.devel</code> folder on <code>*/Android/data/</code>. Inside <code>com.prineside.tdi2.devel</code> folder create the <code>files</code> folder.
-3. Copy to the <code>files</code> folder all the contents of the <code>assets</code> folder from the original apk file. **Required the apk of the original version v1.8.7 (build 184). Using resources from other versions does not guarantee stable**
+3. Copy to the <code>files</code> folder all the contents of the <code>assets</code> folder from the original apk file. **For this DevEL version required the apk of the original version v1.8.7 (build 184). Using resources from other versions does not guarantee stable**
 4. Done
 
 ## How to build
